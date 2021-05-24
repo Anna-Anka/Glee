@@ -1,0 +1,121 @@
+.header {
+    padding: 50px 0 35px;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.menu {
+    &__list {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item {
+
+        &:not(:last-child) {
+            margin-right: 35px;
+        }
+    }
+
+    &__link {
+        @extend %rubik-500;
+        @extend %link;
+        font-size: 15px;
+        color: #436372;
+    }
+}
+
+.user-nav {
+    display: flex;
+    justify-content: space-between;
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item {
+
+        &:not(:last-child) {
+           margin-right: 20px;
+        }
+    }
+
+    &__item--search {
+        background-color: #edf1f4;
+        border-radius: 50%;
+        padding: 18px;
+    }
+
+    &__item--heart {
+        background-color: $bg;
+        border-radius: 100px;
+        padding: 22px 42px 13px;
+    }
+
+    &__heart {
+        margin-right: 27px;
+        padding-right: 27px;
+        border-right: 1px solid #ffffff;
+    }
+
+    &__btn {
+        padding: 0;
+        background-color: transparent;
+        @extend %btn;
+    }
+
+    &__item--nav {
+        background-color: $accent;
+        border-radius: 50%;
+        padding: 15px 17px;
+    }
+
+    &__link {
+        position: relative;
+    }
+
+    &__icon {
+        width: 17px;
+        height: 17px;
+        fill: #25404d;
+    }
+
+    &__icon--bright {
+        transition: fill 0.5s;
+        
+        &:hover {
+            fill: #ffffff;
+        }
+    }
+
+    &__num {
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: #ffffff;
+        top: -8px;
+        right: -10px;
+        font-size: 10px;
+        color: #243f4d;
+        text-align: center;
+        line-height: 1.6;
+        @extend %dmsans-400;
+    }
+
+    &__icon--dark {
+        width: 20px;
+        height: 20px;
+        fill: #ffffff;
+        transition: fill 0.5s;
+
+        &:hover {
+            fill: $title;
+        }
+    }
+}

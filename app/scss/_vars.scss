@@ -1,0 +1,55 @@
+$default: #7b7b7b;
+$accent: #a3bbc8;
+$title: #243f4d;
+$bg: #fcd7b6;
+
+%dmsans-700 {
+    font-family: 'DMSans-Bold', sans-serif;
+    font-weight: 700;
+}
+
+%dmsans-500 {
+    font-family: 'DMSans-Bold', sans-serif;
+    font-weight: 500;
+}
+
+%dmsans-400 {
+    font-family: 'DMSans-Bold', sans-serif;
+    font-weight: 400;
+}
+
+%poppins-700 {
+    font-family: 'Poppins-Bold', sans-serif;
+    font-weight: 700;
+}
+
+%rubik-500 {
+    font-family: 'Rubik-Medium', sans-serif;
+    font-weight: 500;
+}
+
+%rubik-400 {
+    font-family: 'Rubik-Medium', sans-serif;
+    font-weight: 400;
+}
+
+%btn {
+    background-color: $accent;
+    color: #ffffff;
+    line-height: 1.3;
+    border: none;
+    cursor: pointer;
+    transition: color 0.5s;
+
+    &:hover {
+        color: #fcd7b6;
+    }
+}
+
+%link {
+    transition: color 0.5s;
+
+    &:hover {
+        color: $accent;
+    }
+}
