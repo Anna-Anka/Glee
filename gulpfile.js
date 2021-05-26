@@ -37,7 +37,7 @@ function svgSprites() {
 }
 
 function htmlInclude() {
-    return src(['app/html/*.html'])
+    return src(['app/html/**/*.html'])
         .pipe(fileInclude({
             prefix: '@',
             basepath: '@file',

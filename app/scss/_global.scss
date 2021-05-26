@@ -1,6 +1,8 @@
 body {
+    color: #ffffff;
     min-height: 100vh;
-    @extend %rubik-400;
+    font-family: $rubik;
+    font-weight: $rubik400;
     font-size: 16px;
     line-height: 1.3;
     color: $default;
@@ -26,13 +28,20 @@ body {
 }
 
 .container {
-    max-width: 1800px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
+
+    &--large {
+        max-width: 1800px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
 }
 
 .title {
-    @extend %dmsans-700;
+    font-family: $dmsans;
+    font-weight: $dmsans700;
     font-size: 36px;
     color: #191919;
     margin-bottom: 30px;

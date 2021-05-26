@@ -1,5 +1,5 @@
 .header {
-    padding: 50px 0 35px;
+    padding: 50px 0 44px;
 
     &__inner {
         display: flex;
@@ -9,10 +9,8 @@
 }
 
 .menu {
-    &__list {
-        display: flex;
-        justify-content: space-between;
-    }
+    display: flex;
+    justify-content: space-between;
 
     &__item {
 
@@ -22,10 +20,11 @@
     }
 
     &__link {
-        @extend %rubik-500;
-        @extend %link;
+        font-family: $rubik;
+        font-weight: $rubik500;
+        @include link;
         font-size: 15px;
-        color: #436372;
+        color: $grey400;
     }
 }
 
@@ -36,60 +35,73 @@
     &__item {
         display: flex;
         justify-content: space-between;
-    }
-
-    &__item {
-
-        &:not(:last-child) {
-           margin-right: 20px;
-        }
+        width: 50px;
+        height: 50px;
     }
 
     &__item--search {
-        background-color: #edf1f4;
+        background-color: $light300;
         border-radius: 50%;
-        padding: 18px;
+        margin-right: 20px;
+    }
+
+    &__item--heart,
+    &__item--cart {
+        background-color: $bg;
+        width: 90px;
+        height: 50px;
     }
 
     &__item--heart {
-        background-color: $bg;
-        border-radius: 100px;
-        padding: 22px 42px 13px;
+        border-radius: 100px 0 0 100px;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 1px;
+            height: 32px;
+            background-color: $light100;
+            top: 10px;
+            right: 0;
+        }
     }
 
-    &__heart {
-        margin-right: 27px;
-        padding-right: 27px;
-        border-right: 1px solid #ffffff;
+    &__item--cart {
+        border-radius: 0 100px 100px 0;
+        margin-right: 20px;
     }
 
     &__btn {
         padding: 0;
         background-color: transparent;
-        @extend %btn;
+        @include btn;
     }
 
     &__item--nav {
         background-color: $accent;
         border-radius: 50%;
-        padding: 15px 17px;
     }
 
     &__link {
         position: relative;
+        border: none;
+        background-color: transparent;
+        vertical-align: middle;
+        margin: auto;
     }
 
     &__icon {
         width: 17px;
         height: 17px;
-        fill: #25404d;
+        fill: $grey600;
     }
 
     &__icon--bright {
         transition: fill 0.5s;
-        
+
         &:hover {
-            fill: #ffffff;
+            fill: $light100;
         }
     }
 
@@ -98,20 +110,21 @@
         width: 16px;
         height: 16px;
         border-radius: 50%;
-        background-color: #ffffff;
+        background-color: $light100;
         top: -8px;
         right: -10px;
         font-size: 10px;
-        color: #243f4d;
+        color: $title;
         text-align: center;
         line-height: 1.6;
-        @extend %dmsans-400;
+        font-family: $dmsans;
+        font-weight: $dmsans400;
     }
 
     &__icon--dark {
         width: 20px;
         height: 20px;
-        fill: #ffffff;
+        fill: $light100;
         transition: fill 0.5s;
 
         &:hover {

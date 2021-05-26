@@ -1,12 +1,15 @@
-@import 'vars';
 @import 'fonts';
+@import 'vars';
+@import 'mixins';
 @import 'reset';
 @import 'libs';
 @import 'global';
 
-@import 'header';
-@import 'home';
-@import 'footer';
+@import 'components/header';
 
+@import 'components/home-page/top-slider';
+@import 'components/home-page/advantages';
+@import 'components/home-page/products-week';
 
-@import 'media'; 
+@import 'components/footer';
+

@@ -6,14 +6,20 @@
         padding: 80px 0 75px;
     }
 
-    &__name {
-        @extend %dmsans-700;
-        color: #1f2044;
+    &__logo {
         margin-bottom: 30px;
+        display: block;
+    }
+
+    &__name {
+        font-family: $dmsans;
+        font-weight: $dmsans700;
+        color: $dark500;
         text-transform: uppercase;
         display: flex;
         align-items: center;
-        height: 21px;
+        padding-top: 10px;
+        margin-bottom: 30px;
     }
 
     &__item-contact {
@@ -35,12 +41,16 @@
         margin-bottom: 20px;
     }
 
-    &__link,
-    &__text {
-        font-size: 14px;
+    &__link {
+        @include line-clamp($font-size: 14px,
+            $line-height: 1.4,
+            $lines-to-show: 4);
     }
 
     &__text {
+        @include line-clamp($font-size: 14px,
+            $line-height: 1.4,
+            $lines-to-show: 6);
         max-width: 270px;
         margin-bottom: 35px;
     }
@@ -55,15 +65,17 @@
         border: none;
 
         &::placeholder {
-            color: #234969;
+            color: $grey500;
             font-size: 12px;
-            @extend %dmsans-400;
+            font-family: $dmsans;
+            font-weight: $dmsans400;
         }
     }
 
     &__btn {
-        @extend %btn;
-        @extend %dmsans-400;
+        @include btn;
+        font-family: $dmsans;
+        font-weight: $dmsans400;
         padding: 14px 17px;
     }
 
@@ -75,14 +87,7 @@
 
     &__bottom {
         padding: 35px 0 40px;
-        border-top: 1px solid #dae4e9;
-    }
-
-    &__copy {
-        margin-right: 520px;
-    }
-
-    &__nav {
+        border-top: 1px solid $light500;
         display: flex;
         justify-content: space-between;
     }
@@ -98,6 +103,6 @@
 
     &__nav-link,
     &__link {
-        @extend %link;
+        @include link;
     }
 }

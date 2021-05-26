@@ -3,53 +3,35 @@ $accent: #a3bbc8;
 $title: #243f4d;
 $bg: #fcd7b6;
 
-%dmsans-700 {
-    font-family: 'DMSans-Bold', sans-serif;
-    font-weight: 700;
-}
+$dark700: #191919;
+$dark600: #292222;
+$dark500: #1f2044;
+$dark400: #1f2044;
 
-%dmsans-500 {
-    font-family: 'DMSans-Bold', sans-serif;
-    font-weight: 500;
-}
+$grey600: #25404d;
+$grey500: #234969;
+$grey400: #436372;
+$grey300: #a6bdca;
 
-%dmsans-400 {
-    font-family: 'DMSans-Bold', sans-serif;
-    font-weight: 400;
-}
+$brown600: #414141;
+$brown500: #585858;
+$brown400: #8b8b8b;
 
-%poppins-700 {
-    font-family: 'Poppins-Bold', sans-serif;
-    font-weight: 700;
-}
+$light500: #dae4e9;
+$light400: #e8e4df;
+$light300: #edf1f4;
+$light200: #fef7f0;
+$light100: #ffffff;
 
-%rubik-500 {
-    font-family: 'Rubik-Medium', sans-serif;
-    font-weight: 500;
-}
+$dmsans: 'DMSans', sans-serif; 
+$dmsans400: 400;
+$dmsans500: 500;
+$dmsans700: 700;
 
-%rubik-400 {
-    font-family: 'Rubik-Medium', sans-serif;
-    font-weight: 400;
-}
+$poppins: 'Poppins', sans-serif;
+$poppins700: 700;
 
-%btn {
-    background-color: $accent;
-    color: #ffffff;
-    line-height: 1.3;
-    border: none;
-    cursor: pointer;
-    transition: color 0.5s;
+$rubik: 'Rubik', sans-serif;
+$rubik400: 400;
+$rubik500: 500;
 
-    &:hover {
-        color: #fcd7b6;
-    }
-}
-
-%link {
-    transition: color 0.5s;
-
-    &:hover {
-        color: $accent;
-    }
-}
