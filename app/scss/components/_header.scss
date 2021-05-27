@@ -10,7 +10,6 @@
 
 .menu {
     display: flex;
-    justify-content: space-between;
 
     &__item {
 
@@ -21,7 +20,7 @@
 
     &__link {
         font-family: $rubik;
-        font-weight: $rubik500;
+        font-weight: $fw-500;
         @include link;
         font-size: 15px;
         color: $grey400;
@@ -33,26 +32,33 @@
     justify-content: space-between;
 
     &__item {
-        display: flex;
-        justify-content: space-between;
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+    }
+
+    &__link {
         width: 50px;
         height: 50px;
     }
 
-    &__item--search {
+    &__link--search {
         background-color: $light300;
         border-radius: 50%;
-        margin-right: 20px;
+        @include user-icon
     }
 
-    &__item--heart,
-    &__item--cart {
+    &__link--heart,
+    &__link--cart {
         background-color: $bg;
         width: 90px;
         height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
-    &__item--heart {
+    &__link--heart {
         border-radius: 100px 0 0 100px;
         position: relative;
 
@@ -67,18 +73,17 @@
         }
     }
 
-    &__item--cart {
+    &__link--cart {
         border-radius: 0 100px 100px 0;
-        margin-right: 20px;
     }
 
     &__btn {
         padding: 0;
-        background-color: transparent;
+        border-radius: 50%; 
         @include btn;
     }
 
-    &__item--nav {
+    &__link--nav {
         background-color: $accent;
         border-radius: 50%;
     }
@@ -86,9 +91,6 @@
     &__link {
         position: relative;
         border: none;
-        background-color: transparent;
-        vertical-align: middle;
-        margin: auto;
     }
 
     &__icon {
@@ -111,14 +113,12 @@
         height: 16px;
         border-radius: 50%;
         background-color: $light100;
-        top: -8px;
-        right: -10px;
+        top: 10px;
+        right: 27px;
         font-size: 10px;
         color: $title;
         text-align: center;
         line-height: 1.6;
-        font-family: $dmsans;
-        font-weight: $dmsans400;
     }
 
     &__icon--dark {

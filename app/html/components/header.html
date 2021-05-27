@@ -2,10 +2,10 @@
     <h1 class="visually-hidden">
         the best online furniture store
     </h1>
-    <div class="container--large">
+    <div class="container container--large">
         <nav class="header__inner">
             <a class="logo header__logo" href="#">
-                <img class="logo__img" src="img/logo.png" alt="Logo" width="150" height="40">
+                <img class="logo__img" src="img/logo.png" alt="Logo">
             </a>
 
             <ul class="menu">
@@ -42,8 +42,8 @@
             </ul>
 
             <div class="user-nav">
-                <div class="user-nav__item user-nav__item--search">
-                    <button class="user-nav__link">
+                <div class="user-nav__item">
+                    <button class="user-nav__link user-nav__link--search">
                         <span class="visually-hidden">
                             when you click on this button, a product search will open
                         </span>
@@ -53,20 +53,18 @@
                     </button>
                 </div>
 
-                <div class="user-nav__item user-nav__item--heart">
-                    <a class="user-nav__link" href="#">
-                        <span class="visually-hidden">
-                            when you click, a page with the products you like will open
-                        </span>
-                        <svg class="user-nav__icon user-nav__icon--bright">
-                            <use xlink:href="img/sprite.svg#heart-icon"></use>
-                        </svg>
-                        <span class="user-nav__num">0</span>
-                    </a>
-                </div>
-
-                <div class="user-nav__item user-nav__item--cart">
-                    <a class="user-nav__link" href="#">
+                <a class="user-nav__link user-nav__link--heart" href="#">
+                    <span class="visually-hidden">
+                        when you click, a page with the products you like will open
+                    </span>
+                    <svg class="user-nav__icon user-nav__icon--bright">
+                        <use xlink:href="img/sprite.svg#heart-icon"></use>
+                    </svg>
+                    <span class="user-nav__num">0</span>
+                </a>
+   
+                <div class="user-nav__item">
+                    <a class="user-nav__link user-nav__link--cart" href="#">
                         <span class="visually-hidden">
                             When you click, the shopping cart will open
                         </span>
@@ -77,7 +75,7 @@
                     </a>
                 </div>
 
-                <div class="user-nav__item user-nav__item--nav">
+                <div class="user-nav__item">
                     <button class="user-nav__link user-nav__btn" type="button">
                         <span class="visually-hidden">
                             when clicked, a mobile menu will open

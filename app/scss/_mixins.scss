@@ -27,6 +27,16 @@
     }
 }
 
+@mixin user-icon {
+    display: flex;
+    flex-direction: column;
+    transition: background-color 0.5s;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
 /// @param {Value}          $font-size    
 /// @param {Unitless Value} $line-height 
 /// @param {Number}         $lines-to-show 

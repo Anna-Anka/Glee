@@ -7,13 +7,12 @@
     }
 
     &__logo {
-        margin-bottom: 30px;
+        margin-bottom: 25px;
         display: block;
     }
 
     &__name {
-        font-family: $dmsans;
-        font-weight: $dmsans700;
+        font-weight: $fw-700;
         color: $dark500;
         text-transform: uppercase;
         display: flex;
@@ -50,33 +49,9 @@
     &__text {
         @include line-clamp($font-size: 14px,
             $line-height: 1.4,
-            $lines-to-show: 6);
+            $lines-to-show: 4);
         max-width: 270px;
         margin-bottom: 35px;
-    }
-
-    &__form {
-        display: flex;
-    }
-
-    &__input {
-        background-color: $bg;
-        padding: 15px 10px 15px 15px;
-        border: none;
-
-        &::placeholder {
-            color: $grey500;
-            font-size: 12px;
-            font-family: $dmsans;
-            font-weight: $dmsans400;
-        }
-    }
-
-    &__btn {
-        @include btn;
-        font-family: $dmsans;
-        font-weight: $dmsans400;
-        padding: 14px 17px;
     }
 
     &__inner,
@@ -90,15 +65,6 @@
         border-top: 1px solid $light500;
         display: flex;
         justify-content: space-between;
-    }
-
-    &__nav-item {
-
-        &:not(:last-child) {
-            margin-right: 14px;
-            padding-right: 15px;
-            border-right: 1px solid $default;
-        }
     }
 
     &__nav-link,

@@ -1,0 +1,13 @@
+.footer-menu {
+    &__item {
+        &:not(:last-child) {
+            margin-right: 14px;
+            padding-right: 15px;
+            border-right: 1px solid $default;
+        }
+    }
+
+    &__link {
+        @include link;
+    }
+}

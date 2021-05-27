@@ -1,0 +1,30 @@
+.filter {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
+
+    &__catalog {
+        &:not(:last-child) {
+            margin-right: 25px;
+        }
+    }
+
+    &__btn {
+        font-weight: $fw-700;
+        font-size: 16px;
+        color: $brown400;
+        border: none;
+        padding: 0;
+        background-color: transparent;
+        cursor: pointer;
+        transition: color 0.5s;
+
+        &:hover {
+            color: $title;
+        }
+    }
+}
+
+.mixitup-control-active {
+    color: $dark700;
+}

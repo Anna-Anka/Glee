@@ -7,7 +7,7 @@
     }
 
     &__item {
-        padding: 40px 0 43px;
+        padding: 38px 0 52px;
         flex-grow: 1;
 
         &:not(:last-child) {
@@ -18,17 +18,25 @@
     &__content {
         max-width: 220px;
         margin: 0 auto;
+        position: relative;
+        
+        &::before {
+            content: "";
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 7px;
+            left: -70px;
+            width: 53px;
+            height: 53px;
+        }
     }
 
     &__title {
-        /*@include line-clamp(
-            $font-size: 18px,
-            $line-height: 2.1,
-            $lines-to-show: 2);*/
-        font-family: $dmsans;
-        font-weight: $dmsans700;
+        @include line-clamp($font-size: 18px,
+            $line-height: 2.3,
+            $lines-to-show: 5);
+        font-weight: $fw-700;
         color: $brown600;
-        margin-bottom: 10px;
         position: relative;
 
         &::before {
@@ -42,16 +50,16 @@
         }
     }
 
-    &__title--support::before {
+    &__content--support::before {
         background-image: url('../img/support.png');
     }
 
-    &__title--delivery::before {
+    &__content--delivery::before {
         background-image: url('../img/delivery.png');
         height: 37px;
     }
 
-    &__title--payment::before {
+    &__content--payment::before {
         background-image: url('../img/payment.png');
     }
 
@@ -59,8 +67,6 @@
         @include line-clamp($font-size: 16px,
             $line-height: 1.3,
             $lines-to-show: 3);
-        font-family: $dmsans;
-        font-weight: $dmsans400;
         color: $brown500;
         max-width: 215px;
     }

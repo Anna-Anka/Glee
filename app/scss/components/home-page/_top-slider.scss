@@ -3,59 +3,42 @@
     &__item {
         background-color: $bg;
         height: 820px;
-        display: flex;
+        display: flex !important;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-around;
     }
 
     &__inner {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
         margin: 0 auto;
-        max-width: 1244px;
     }
 
-    &__content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        height: 745px;
-    }
-
-    &__picture {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    &__title {
-        @include line-clamp(
-            $font-size: 72px,
-            $line-height: 1.3,
+    &__name {
+        @include line-clamp($font-size: 72px,
+            $line-height: 1,
             $lines-to-show: 3);
         font-family: $rubik;
-        font-weight: $rubik500;
+        font-weight: $fw-500;
         color: $title;
         max-width: 500px;
-        margin-bottom: 20px;
+        margin-bottom: 55px;
     }
 
     &__text {
-        @include line-clamp(
-            $font-size: 16px,
+        @include line-clamp($font-size: 16px,
             $line-height: 1.7,
             $lines-to-show: 6);
         color: $grey400;
         font-family: $rubik;
-        font-weight: $rubik400;
-        margin-bottom: 45px;
-        max-width: 400px;
+        margin-bottom: 55px;
+        max-width: 380px;
         text-overflow: hidden;
     }
 
     &__link {
         font-family: $rubik;
-        font-weight: $rubik500;
+        font-weight: $fw-500;
         @include btn;
         font-size: 15px;
         position: relative;
@@ -73,35 +56,27 @@
         }
     }
 
-    &__images {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__picture {
+        width: 640px;
+        height: 264px;
         position: relative;
 
         &::before {
             content: "";
             position: absolute;
             width: 634px;
-            height: 634px;
-            top: 105px;
-            right: -114px;
+            height: 634px;                       
+            right: -130px;
+            top: -148px;
             border-radius: 50%;
-            background: linear-gradient(88deg, rgba(255, 255, 255, 0), #fffcfa);
-
+            background-image: linear-gradient(88deg, rgba(255, 255, 255, 0), #fffcfa);
         }
-    }
-
-    &__picture {
-        max-width: 640px;
-        max-height: 264px;
-    }
-
-    &__img {
-        z-index: 10;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
     }
 
     .slick-dots {
