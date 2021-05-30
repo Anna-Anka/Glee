@@ -26,9 +26,7 @@
     }
 
     &__text {
-        @include line-clamp($font-size: 16px,
-            $line-height: 1.7,
-            $lines-to-show: 6);
+        @include line-clamp($font-size: 16px, $line-height: 1.7, $lines-to-show: 6);
         color: $grey400;
         font-family: $rubik;
         margin-bottom: 55px;
@@ -60,6 +58,7 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+        position: relative;
     }
 
     &__picture {

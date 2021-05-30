@@ -5,22 +5,29 @@ $bg: #fcd7b6;
 
 
 $dark700: #191919;
+$dark650: #262626;
 $dark600: #292222;
+$dark550: #222933;
 $dark500: #1f2044;
 $dark400: #1f2044;
 $grey600: #25404d;
 $grey500: #234969;
 $grey400: #436372;
 $grey300: #a6bdca;
+$grey200: #b3b7b5;
 
 $brown600: #414141;
 $brown500: #585858;
 $brown400: #8b8b8b;
 
+
 $light500: #dae4e9;
 $light400: #e8e4df;
+$light350: #fcf5ee;
 $light300: #edf1f4;
+$light250: #feefe2;
 $light200: #fef7f0;
+$light150: #fffcfa;
 $light100: #ffffff;
 
 $dmsans: 'DMSans', sans-serif; 
@@ -31,3 +38,10 @@ $fw-700: 700;
 $fw-500: 500;
 $fw-400: 400;
 
+@function max($numbers...) {
+    @return m#{a}x(#{$numbers});
+}
+
+@function min($numbers...) {
+    @return m#{i}n(#{$numbers});
+}

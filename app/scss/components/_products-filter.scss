@@ -1,4 +1,4 @@
-.filter {
+.products-filter {
     display: flex;
     justify-content: center;
     margin-bottom: 80px;
@@ -21,6 +21,10 @@
 
         &:hover {
             color: $title;
+        }
+
+        &:active {
+            color: $bg;
         }
     }
 }

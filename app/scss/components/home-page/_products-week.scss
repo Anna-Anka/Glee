@@ -1,8 +1,8 @@
 .products-week {
-    padding: 70px 0 90px;
+    padding: 70px 0 95px;
 
     &__title {
-        margin-bottom: 20px;
+        margin-bottom: 15px;
     }
 
     &__items {
@@ -10,93 +10,154 @@
         flex-wrap: wrap;
         margin: 0 auto;
         margin-right: -30px;
-        margin-bottom: 145px;
+        margin-bottom: 150px;
     }
 
     &__item {
         background-color: $light100;
         box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
         margin: 0 30px 40px 0;
-        padding: 30px 10px 40px;
+        padding: 30px 0 40px;
         width: 270px;
         font-size: 16px;
-        cursor: pointer;
         position: relative;
 
         &:hover {
-            .products-week__hover {
+            .product-card__hover {
                 opacity: 1;
             }
         }
     }
 
-    &__text {
-        font-weight: $fw-500;
-        color: $title;
+    .user-icon {
+        transition: background-color 0.5s;
+    }
+
+    .product-card {
+        height: 100%;
+    }
+}
+
+.lamp {
+    &__items {
         display: flex;
-        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__item {
+        background-color: $light250;
+        width: 100%;
+        height: 390px;
+
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+    }
+
+    &__card {
+        display: flex;
         align-items: center;
+        justify-content: center;
     }
 
-    &__name {
-        margin-bottom: 12px;
-        @include line-clamp($font-size: 16px,
-            $line-height: 2,
-            $lines-to-show: 2);
-    }
-
-    &__price {
-        font-weight: $fw-700;
-        color: $accent;
+    &__content {
+        color: $title;
+        font-family: $rubik;
     }
 
     &__picture {
-        margin: 0 auto;
+        width: 230px;
+        height: 403px;
+        margin-right: 60px;
+        margin-top: -90px;
     }
 
     &__img {
+        width: 100%;
+        height: 100%;
         object-fit: cover;
     }
 
-    &__hover {
-        display: flex;
-        left: 0;
-        max-width: 170px;
-        margin: auto;
-        right: 0;
-        top: 50%;
-        opacity: 0;
+    &__name {
+        font-family: $dmsans;
+        font-weight: $fw-700;
+        margin-bottom: 20px;
+        max-width: 280px;
+        @include line-clamp($font-size: 26px, $line-height: 1.3, $lines-to-show: 2);
+    }
+
+    &__text {
+        font-weight: $fw-400;
+        margin-bottom: 35px;
+        max-width: 305px;
+        @include line-clamp($font-size: 16px, $line-height: 2, $lines-to-show: 3);
+    }
+
+    &__link {
+        border: 1px solid $grey200;
+        border-radius: 5px;
+        padding: 20px 80px 20px 15px;
+        font-weight: $fw-500;
+        color: $grey400;
+        position: relative;
+        transition: background-color 0.5s;
+
+        &::before {
+            content: "";
+            top: 18px;
+            right: 20px;
+            position: absolute;
+            width: 22px;
+            height: 22px;
+            background-image: url('../img/sprite.svg#lamp-arrow');
+            background-repeat: no-repeat;
+        }
+
+        &:hover {
+            background-color: $light100;
+        }
+
+        &:focus {
+            color: $default;
+        }
+    }
+}
+
+.video {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 115px;
+    position: relative;
+
+
+    &::after {
+        content: "";
         position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 0;
+        background-color: $light150;
         transition: opacity 0.5s;
     }
 
-    &__effect {
-        &:not(:last-child) {
-            margin-right: 16px;
-        }
+    &:hover::after {
+        opacity: 0.2;
     }
 
-
-    &__link {
-        background-color: $light100;
-        width: 45px;
-        height: 45px;
-        box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
-        @include user-icon;
+    &__play {
+        position: relative;
+        z-index: 10;
+        transition: transform 0.5s;
 
         &:hover {
-            background-color: $accent;
-
-            .products-week__icon {
-                fill: $light100;
-            }
+            transform: scale(1.2);
         }
-    }
-
-    &__icon {
-        width: 20px;
-        height: 20px;
-        fill: $grey300;
-        transition: fill 0.5s;
     }
 }

@@ -31,36 +31,40 @@
     display: flex;
     justify-content: space-between;
 
-    &__item {
-        &:not(:last-child) {
-            margin-right: 20px;
-        }
-    }
-
     &__link {
         width: 50px;
         height: 50px;
+        bottom: 10px;
+        margin-right: 20px;
+        transition: background-color 0.5s;
     }
 
-    &__link--search {
+    .user-icon--search {
         background-color: $light300;
-        border-radius: 50%;
-        @include user-icon
+
+        &:hover {
+            background-color: $accent;
+        }
     }
 
     &__link--heart,
     &__link--cart {
         background-color: $bg;
         width: 90px;
-        height: 50px;
+        bottom: 10px;
         display: flex;
         justify-content: center;
         align-items: center;
+
+        &:hover {
+            background-color: $light300;
+        }
     }
 
     &__link--heart {
         border-radius: 100px 0 0 100px;
         position: relative;
+        margin-right: 0;
 
         &::before {
             position: absolute;
@@ -79,8 +83,14 @@
 
     &__btn {
         padding: 0;
-        border-radius: 50%; 
+        border-radius: 50%;
+        transition: background-color 0.5s;
         @include btn;
+        margin-right: 0;
+
+        &:hover {
+            background-color: $bg;
+        }
     }
 
     &__link--nav {
@@ -101,10 +111,6 @@
 
     &__icon--bright {
         transition: fill 0.5s;
-
-        &:hover {
-            fill: $light100;
-        }
     }
 
     &__num {
@@ -126,9 +132,5 @@
         height: 20px;
         fill: $light100;
         transition: fill 0.5s;
-
-        &:hover {
-            fill: $title;
-        }
     }
 }

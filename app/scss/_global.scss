@@ -51,6 +51,22 @@ body {
     object-fit: cover;
 }
 
+.user-icon {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: $light100;
+    transition: background-color 0.5s;
+
+    &:hover {
+        background-color: $accent;
+    }
+}
+
 
 a:focus,
 button:focus,
