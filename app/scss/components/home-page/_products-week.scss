@@ -8,9 +8,7 @@
     &__items {
         display: flex;
         flex-wrap: wrap;
-        margin: 0 auto;
-        margin-right: -30px;
-        margin-bottom: 150px;
+        margin: 0 -30px 150px 0;
     }
 
     &__item {
@@ -119,45 +117,6 @@
 
         &:focus {
             color: $default;
-        }
-    }
-}
-
-.video {
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    height: 500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 115px;
-    position: relative;
-
-
-    &::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        opacity: 0;
-        background-color: $light150;
-        transition: opacity 0.5s;
-    }
-
-    &:hover::after {
-        opacity: 0.2;
-    }
-
-    &__play {
-        position: relative;
-        z-index: 10;
-        transition: transform 0.5s;
-
-        &:hover {
-            transform: scale(1.2);
         }
     }
 }

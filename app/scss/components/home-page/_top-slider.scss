@@ -15,9 +15,7 @@
     }
 
     &__name {
-        @include line-clamp($font-size: 72px,
-            $line-height: 1,
-            $lines-to-show: 3);
+        @include line-clamp($font-size: 72px, $line-height: 1, $lines-to-show: 3);
         font-family: $rubik;
         font-weight: $fw-500;
         color: $title;
