@@ -30,6 +30,10 @@
     &:focus {
         color: $default;
     }
+
+    &:active {
+        color: $bg;
+    }
 }
 
 @mixin user-icon {
@@ -46,6 +50,14 @@
     &:hover {
         background-color: $accent;
     }
+}
+
+@mixin checkbox-hidden {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    position: absolute;
 }
 
 /// @param {Value}          $font-size    
@@ -71,4 +83,16 @@
     text-overflow: ellipsis;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: $lines-to-show;
+}
+
+@mixin max-w($width) {
+    @media only screen and (max-width: $width+ "px") {
+        @content;
+    }
+}
+
+@mixin min-w($width) {
+    @media only screen and (min-width: $width+ "px") {
+        @content;
+    }
 }

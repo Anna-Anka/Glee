@@ -1,29 +1,85 @@
 .header {
     padding: 50px 0 44px;
 
+    @include max-w($xl) {
+        padding: 20px 0;
+    }
+
+    @include max-w($lm) {
+        padding-top: 10px;
+    }
+
     &__inner {
         display: flex;
         justify-content: space-between;
         align-items: center;
-    }
-}
 
-.menu {
-    display: flex;
-
-    &__item {
-
-        &:not(:last-child) {
-            margin-right: 35px;
+        @include max-w($lm) {
+            flex-direction: column;
         }
     }
 
-    &__link {
-        font-family: $rubik;
-        font-weight: $fw-500;
-        @include link;
-        font-size: 15px;
-        color: $grey400;
+    .logo {
+        @include max-w($lm) {
+            margin-bottom: 20px;
+        }
+    }
+
+    .menu {
+        display: flex;
+
+        @include max-w($lg) {
+            font-size: 14px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: $light500;
+            text-align: center;
+            transform: translateY(-200%);
+            transition: transform 0.5s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow: auto;
+            padding: 30px 0;
+        }
+
+        &--active {
+            @include max-w($lg) {
+                transform: translateY(0);
+            }
+        }
+
+        &__item {
+            &:not(:last-child) {
+                margin-right: 35px;
+
+                @include max-w($lg) {
+                    margin-right: 0;
+                }
+            }
+        }
+
+        &__link {
+            font-family: $rubik;
+            font-weight: $fw-500;
+            @include link;
+            font-size: 15px;
+            color: $grey400;
+
+            @include max-w($xl) {
+                font-size: 14px;
+            }
+
+            @include max-w($lg) {
+                font-size: 16px;
+                line-height: 1.3;
+                padding: 15px 0;
+                display: block;
+            }
+        }
     }
 }
 
@@ -34,9 +90,17 @@
     &__link {
         width: 50px;
         height: 50px;
-        bottom: 10px;
         margin-right: 20px;
         transition: background-color 0.5s;
+
+        @include max-w($xl) {
+            margin-right: 10px;
+        }
+
+        @include max-w($md) {
+            width: 40px;
+            height: 40px;
+        }
     }
 
     .user-icon--search {
@@ -51,7 +115,6 @@
     &__link--cart {
         background-color: $bg;
         width: 90px;
-        bottom: 10px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -93,6 +156,7 @@
         }
     }
 
+
     &__link--nav {
         background-color: $accent;
         border-radius: 50%;
@@ -132,5 +196,15 @@
         height: 20px;
         fill: $light100;
         transition: fill 0.5s;
+    }
+
+    &--active {
+        .user-nav__link--heart,
+        .user-nav__link--cart,
+        .user-icon--search {
+            @include max-w($xl) {
+                opacity: 0;
+            }
+        }
     }
 }

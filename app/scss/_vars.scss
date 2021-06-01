@@ -46,3 +46,11 @@ $fw-400: 400;
 @function min($numbers...) {
     @return m#{i}n(#{$numbers});
 }
+
+
+$lx: 1440;
+$xl: 1220;
+$lg: 992;
+$md: 768;
+$sm: 576;
+$lm: 470;

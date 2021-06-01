@@ -6,11 +6,11 @@
     &__picture {
         margin: auto;
         max-width: 255px;
-        max-height: 215px;
+        max-height: 190px;
         margin-bottom: 45px;
     }
 
-    &__text {   
+    &__text {
         font-weight: $fw-500;
         color: $title;
         margin-top: auto;
@@ -21,13 +21,17 @@
 
     &__name {
         margin-bottom: 12px;
-        @include line-clamp($font-size: 16px, $line-height: 2, $lines-to-show: 2);
+        @include line-clamp(16px, 2, 2);
+
+        @include max-w($lm) {
+           margin-bottom: 0;
+        }
     }
 
     &__price {
         font-weight: $fw-700;
         color: $accent;
-        @include line-clamp($font-size: 16px, $line-height: 2, $lines-to-show: 1);
+        @include line-clamp(16px, 2, 1);
     }
 
     &__hover {
@@ -46,7 +50,6 @@
         width: 45px;
         height: 45px;
         box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
-
 
         &:not(:last-child) {
             margin-right: 15px;

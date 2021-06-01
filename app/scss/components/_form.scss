@@ -15,6 +15,10 @@
         &:focus {
             outline: 2px solid $accent;
         }
+
+        @include max-w($xl) {
+            padding: 10px 5px;
+        }
     }
 
     &__btn {

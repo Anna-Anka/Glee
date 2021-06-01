@@ -1,14 +1,37 @@
 .products-week {
-    padding: 70px 0 95px;
+    padding: 66px 0 95px;
 
-    &__title {
-        margin-bottom: 15px;
+    @include max-w($xl) {
+        grid-template-columns: 270px 270px 270px;
+        padding: 20px 0;
+    }
+
+    @include max-w($lg) {
+        padding: 15px 0 0;
     }
 
     &__items {
-        display: flex;
-        flex-wrap: wrap;
-        margin: 0 -30px 150px 0;
+        margin-bottom: 170px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+
+        @include max-w($xl) {
+            grid-template-columns: 270px 270px 270px;
+            margin-bottom: 120px;
+        }
+
+        @include max-w($lg) {
+            grid-template-columns: 270px 270px;
+        }
+
+        @include max-w($md) {
+            margin-bottom: 35px;
+        }
+
+        @include max-w($sm) {
+            grid-template-columns: 1fr;
+            margin-bottom: 15px;
+        }
     }
 
     &__item {
@@ -19,12 +42,28 @@
         width: 270px;
         font-size: 16px;
         position: relative;
+        transition: transform 0.5s;
+
+        @include max-w($xl) {
+            margin-bottom: 20px;
+        }
+
 
         &:hover {
+            transform: translateY(-5px);
+
             .product-card__hover {
                 opacity: 1;
             }
         }
+    }
+
+    &__link {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
     }
 
     .user-icon {
@@ -40,15 +79,36 @@
     &__items {
         display: flex;
         justify-content: space-between;
+
+        @include max-w($xl) {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     &__item {
         background-color: $light250;
         width: 100%;
-        height: 390px;
+        padding-bottom: 75px;
+
+        @include max-w($xl) {
+            margin-bottom: 150px;
+        }
+
+        @include max-w($md) {
+            margin-bottom: 30px;
+        }
+
+        @include max-w($md) {
+            margin-bottom: 20px;
+        }
 
         &:not(:last-child) {
             margin-right: 30px;
+
+            @include max-w($xl) {
+                margin-right: 0;
+            }
         }
     }
 
@@ -56,11 +116,22 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
+        @include max-w($lm) {
+            flex-direction: column;
+        }
     }
 
     &__content {
         color: $title;
         font-family: $rubik;
+
+        @include max-w($lm) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
     }
 
     &__picture {
@@ -68,6 +139,28 @@
         height: 403px;
         margin-right: 60px;
         margin-top: -90px;
+
+        &--first {
+            @include max-w($md) {
+                width: 200px;
+            }
+        }
+
+        @include max-w($md) {
+            margin-top: 0;
+            width: 190px;
+            height: 346px;
+        }
+
+        @include max-w($sm) {
+            height: 180px;
+            width: 100px;
+        }
+
+        @include max-w($lm) {
+            width: 100px;
+            margin-bottom: 20px;
+        }
     }
 
     &__img {
@@ -81,14 +174,29 @@
         font-weight: $fw-700;
         margin-bottom: 20px;
         max-width: 280px;
-        @include line-clamp($font-size: 26px, $line-height: 1.3, $lines-to-show: 2);
+        @include line-clamp(26px, 1.3, 2);
+
+        @include max-w($sm) {
+            @include line-clamp(20px, 1.3, 2);
+            margin-bottom: 10px;
+        }
     }
 
     &__text {
         font-weight: $fw-400;
         margin-bottom: 35px;
         max-width: 305px;
-        @include line-clamp($font-size: 16px, $line-height: 2, $lines-to-show: 3);
+        @include line-clamp(16px, 2, 3);
+
+        @include max-w($sm) {
+            @include line-clamp(16px, 1.3, 4);
+        }
+
+        @include max-w($lm) {
+            max-width: 92%;
+            text-align: center;
+            margin-bottom: 15px;
+        }
     }
 
     &__link {
@@ -100,6 +208,10 @@
         position: relative;
         transition: background-color 0.5s;
 
+        @include max-w($lm) {
+            padding: 15px 50px 15px 10px;
+        }
+
         &::before {
             content: "";
             top: 18px;
@@ -109,6 +221,11 @@
             height: 22px;
             background-image: url('../img/sprite.svg#lamp-arrow');
             background-repeat: no-repeat;
+
+            @include max-w($lm) {
+                width: 18px;
+                height: 18px;
+            }
         }
 
         &:hover {
