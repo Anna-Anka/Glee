@@ -156,6 +156,19 @@
         }
     }
 
+    &__mobail {
+        display: none;
+
+        @include max-w($lg) {
+            display: block;
+        }
+    }
+
+    &__decor {
+        @include max-w($lg) {
+            display: none;
+        }
+    }
 
     &__link--nav {
         background-color: $accent;
@@ -199,6 +212,7 @@
     }
 
     &--active {
+
         .user-nav__link--heart,
         .user-nav__link--cart,
         .user-icon--search {

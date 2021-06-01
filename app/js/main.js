@@ -1,9 +1,8 @@
 $(function () {
 
-    $('.user-nav__btn').on('click', function () {
+    $('.user-nav__mobail').on('click', function () {
         $('.header__menu').toggleClass('menu--active');
         $('.user-nav').toggleClass('user-nav--active');
-        $('.top-slider').toggleClass('top-slider--active');
         $('body').toggleClass('lock');
     })
 

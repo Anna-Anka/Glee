@@ -2,7 +2,6 @@
     padding: 66px 0 95px;
 
     @include max-w($xl) {
-        grid-template-columns: 270px 270px 270px;
         padding: 20px 0;
     }
 
@@ -11,25 +10,29 @@
     }
 
     &__items {
-        margin-bottom: 170px;
+        margin-bottom: 195px;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 40px 30px;
+        grid-template-columns: repeat(4, 1fr);
+        justify-content: center;
 
         @include max-w($xl) {
-            grid-template-columns: 270px 270px 270px;
+            grid-template-columns: 28% 28% 28%;
+            margin: 0 auto;
             margin-bottom: 120px;
+            grid-gap: 10px 30px;
         }
 
         @include max-w($lg) {
-            grid-template-columns: 270px 270px;
+            grid-template-columns: 36% 36%;
         }
 
         @include max-w($md) {
             margin-bottom: 35px;
+            grid-template-columns: 1fr;
         }
 
         @include max-w($sm) {
-            grid-template-columns: 1fr;
             margin-bottom: 15px;
         }
     }
@@ -37,17 +40,17 @@
     &__item {
         background-color: $light100;
         box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
-        margin: 0 30px 40px 0;
         padding: 30px 0 40px;
-        width: 270px;
+        max-width: 270px;
+        width: 100%;
         font-size: 16px;
         position: relative;
         transition: transform 0.5s;
+        margin: 0 auto;
 
         @include max-w($xl) {
             margin-bottom: 20px;
         }
-
 
         &:hover {
             transform: translateY(-5px);
@@ -92,15 +95,15 @@
         padding-bottom: 75px;
 
         @include max-w($xl) {
-            margin-bottom: 150px;
-        }
-
-        @include max-w($md) {
-            margin-bottom: 30px;
+            padding-bottom: 40px;
         }
 
         @include max-w($md) {
             margin-bottom: 20px;
+        }
+
+        @include max-w($lm) {
+            padding: 10px 0 25px;
         }
 
         &:not(:last-child) {
@@ -108,6 +111,15 @@
 
             @include max-w($xl) {
                 margin-right: 0;
+                margin-bottom: 130px;
+            }
+
+            @include max-w($md) {
+                margin-bottom: 40px;
+            }
+
+            @include max-w($sm) {
+                margin-bottom: 20px;
             }
         }
     }
@@ -131,12 +143,11 @@
             flex-direction: column;
             align-items: center;
         }
-
     }
 
     &__picture {
-        width: 230px;
-        height: 403px;
+        width: 223px;
+        height: 400px;
         margin-right: 60px;
         margin-top: -90px;
 
@@ -148,8 +159,8 @@
 
         @include max-w($md) {
             margin-top: 0;
-            width: 190px;
-            height: 346px;
+            width: 219px;
+            height: 394px;
         }
 
         @include max-w($sm) {

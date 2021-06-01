@@ -53,6 +53,10 @@
             margin-bottom: 30px;
             box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
         }
+
+        @include max-w($md) {
+            margin-bottom: 20px;
+        }
     }
 }
 
@@ -198,9 +202,8 @@
 
         @include max-w($lm) {
             margin-top: -195px;
-            padding-top: 180px;
+            padding-top: 190px;
         }
-
     }
 
     .slick-track {
