@@ -86,6 +86,14 @@ body.lock {
     &:hover {
         background-color: $accent;
     }
+
+    &:focus {
+        background-color: $default;
+    }
+
+    &:active {
+        background-color: $light450;
+    }
 }
 
 a:focus,

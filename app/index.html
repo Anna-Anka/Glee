@@ -18,9 +18,17 @@
     </h1>
     <div class="container container--large">
         <nav class="header__inner">
-            <a class="logo header__logo" href="#">
-                <img class="logo__img" src="img/logo.png" alt="Logo">
-            </a>
+            <div class="header__top">
+                <a class="logo header__logo" href="#">
+                    <img class="logo__img" src="img/logo.png" alt="Logo">
+                </a>
+                <button class="menu__burger" type="button">
+                    <span class="menu__line"></span>
+                    <span class="visually-hidden">
+                        when clicked, a mobile menu will open
+                    </span>
+                </button>
+            </div>
 
             <ul class="menu header__menu">
                 <li class="menu__item">
@@ -85,15 +93,7 @@
                     <span class="user-nav__num">0</span>
                 </a>
 
-                <button class="user-nav__link user-nav__btn user-nav__decor" type="button">
-                    <span class="visually-hidden">
-                        when clicked, a mobile menu will open
-                    </span>
-                    <svg class="user-nav__icon user-nav__icon--dark">
-                        <use xlink:href="img/sprite.svg#nav-icon"></use>
-                    </svg>
-                </button>
-                <button class="user-nav__link user-nav__btn user-nav__mobail" type="button">
+                <button class="user-nav__link user-nav__btn" type="button">
                     <span class="visually-hidden">
                         when clicked, a mobile menu will open
                     </span>
@@ -313,7 +313,7 @@
                     </article>
                 </li>
 
-                <li class="products-week__item mix category-decor">
+                <li class="products-week__item mix category-furnitures">
                     <a class="products-week__link" href="#">
                         <span class="visually-hidden">
                             when clicked, the product page will open
@@ -501,7 +501,7 @@
                     </article>
                 </li>
 
-                <li class="products-week__item mix category-furnitures">
+                <li class="products-week__item mix category-chair">
                     <a class="products-week__link" href="#">
                         <span class="visually-hidden">
                             when clicked, the product page will open
@@ -883,8 +883,7 @@
             <li class="insights__item">
                 <article class="article-card">
                     <div class="article-card__top">
-                        <a class="article-card__link" href="#"></a>
-                        <div class="article-card__picture">
+                        <a class="article-card__picture" href="#">
                             <span class="visually-hidden">
                                 when clicked, the article page opens
                             </span>
@@ -894,7 +893,7 @@
                             <span class="article-card__category">
                                 news
                             </span>
-                        </div>
+                        </a>
                     </div>
                     <div class="article-card__content">
                         <h3 class="article-card__text">
@@ -915,8 +914,7 @@
             <li class="insights__item">
                 <article class="article-card">
                     <div class="article-card__top">
-                        <a class="article-card__link" href="#"></a>
-                        <div class="article-card__picture">
+                        <a class="article-card__picture" href="#">
                             <span class="visually-hidden">
                                 when clicked, the article page opens
                             </span>
@@ -926,7 +924,7 @@
                             <span class="article-card__category">
                                 news
                             </span>
-                        </div>
+                        </a>
                     </div>
                     <div class="article-card__content">
                         <h3 class="article-card__text">
@@ -947,8 +945,7 @@
             <li class="insights__item">
                 <article class="article-card">
                     <div class="article-card__top">
-                        <a class="article-card__link" href="#"></a>
-                        <div class="article-card__picture">
+                        <a class="article-card__picture" href="#">
                             <span class="visually-hidden">
                                 when clicked, the article page opens
                             </span>
@@ -958,7 +955,7 @@
                             <span class="article-card__category">
                                 news
                             </span>
-                        </div>
+                        </a>
                     </div>
                     <div class="article-card__content">
                         <h3 class="article-card__text">
@@ -1023,13 +1020,12 @@
         </div>
     </div>
 </section>
-
     </main>
 
-
-
-    <footer class="footer">
-    
+        <footer class="footer">
+    <h2 class="visually-hidden ">
+        Below is contact information
+    </h2>
     <div class="container">
         <ul class="footer__content">
             <li class="footer__list footer__contact">
@@ -1057,9 +1053,9 @@
             </li>
 
             <li class="footer__list footer__services">
-                <div class="footer__name">
+                <h3 class="footer__name">
                     services
-                </div>
+                </h3>
                 <ul class="footer__items">
                     <li class="footer__item">
                         <a class="footer__link" href="#">
@@ -1090,9 +1086,9 @@
             </li>
 
             <li class="footer__list footer__account">
-                <div class="footer__name">
+                <h3 class="footer__name">
                     account
-                </div>
+                </h3>
                 <ul class="footer__items">
                     <li class="footer__item">
                         <a class="footer__link" href="#">
@@ -1116,10 +1112,11 @@
                     </li>
                 </ul>
             </li>
-            <li class="footer__item">
-                <div class="footer__name">
+
+            <li class="footer__item footer__newsletter">
+                <h3 class="footer__name">
                     newsletter
-                </div>
+                </h3>
                 <div class="footer__text">
                     <p>
                         Subscribe by our newsletter and get

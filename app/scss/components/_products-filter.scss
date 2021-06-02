@@ -7,13 +7,24 @@
         margin-bottom: 25px;
     }
 
+    @include max-w($lm) {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 5px;
+    }
+
     &__catalog {
         &:not(:last-child) {
             margin-right: 25px;
 
             @include max-w($lm) {
-                margin-right: 17px;
+                margin-right: 0;
+                margin-bottom: 5px;
             }
+        }
+
+        @include max-w($lm) {
+            padding: 10px 0;
         }
     }
 
@@ -26,10 +37,6 @@
         background-color: transparent;
         cursor: pointer;
         transition: color 0.5s;
-
-        @include max-w($lm) {
-            font-size: 15px;
-        }
 
         &:hover {
             color: $title;

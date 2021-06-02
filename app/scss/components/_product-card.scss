@@ -44,6 +44,10 @@
         opacity: 0;
         position: absolute;
         transition: opacity 0.5s;
+
+        @include max-w($lg) {
+            opacity: 1;
+        }
     }
 
     &__link {

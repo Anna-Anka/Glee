@@ -1,6 +1,4 @@
 .top-slider {
-    position: relative;
-    z-index: -1;
 
     &__item {
         background-color: $bg;
@@ -14,15 +12,8 @@
         }
 
         @include max-w($lg) {
+            height: 420px;
             justify-content: flex-start;
-        }
-
-        @include max-w($md) {
-            height: 500px;
-        }
-
-        @include max-w($lm) {
-            height: 470px;
         }
     }
 
@@ -31,9 +22,13 @@
         justify-content: space-between;
         margin: 0 auto;
 
+        @include max-w($xl) {
+            padding-top: 40px;
+        }
+
         @include max-w($lg) {
+            padding-top: 15px;
             flex-direction: column;
-            padding-top: 50px;
         }
 
         @include max-w($md) {
@@ -47,7 +42,7 @@
         }
 
         @include max-w($lg) {
-            margin-bottom: 40px;
+            margin-bottom: 20px;
         }
     }
 
@@ -66,12 +61,12 @@
 
         @include max-w($lg) {
             max-width: 620px;
-            font-size: 60px;
-            margin-bottom: 20px;
+            font-size: 55px;
+            margin-bottom: 10px;
         }
 
         @include max-w($md) {
-            font-size: 45px;
+            font-size: 43px;
             margin-bottom: 10px;
         }
     }
@@ -85,7 +80,7 @@
         text-overflow: hidden;
 
         @include max-w($lg) {
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
     }
 
@@ -107,15 +102,15 @@
             background-image: url('../img/sprite.svg#right-icon');
             background-repeat: no-repeat;
 
-            @include max-w($lm) {
+            @include max-w($lg) {
                 width: 18px;
                 height: 18px;
-                top: 15px;
+                top: 10px;
             }
         }
 
-        @include max-w($lm) {
-            padding: 15px 56px 20px 20px;
+        @include max-w($lg) {
+            padding: 10px 60px 10px 20px;
         }
     }
 
@@ -149,8 +144,8 @@
         }
 
         @include max-w($xl) {
-            width: 540px;
-            height: 210px;
+            width: 402px;
+            height: 163px;
             padding-right: 10px;
         }
 
@@ -174,8 +169,8 @@
         width: 100%;
         bottom: 45px;
 
-        @include max-w($md) {
-            bottom: 15px;
+        @include max-w($lg) {
+            bottom: 13px;
         }
 
         li {

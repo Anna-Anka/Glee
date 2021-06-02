@@ -4,9 +4,17 @@
     </h1>
     <div class="container container--large">
         <nav class="header__inner">
-            <a class="logo header__logo" href="#">
-                <img class="logo__img" src="img/logo.png" alt="Logo">
-            </a>
+            <div class="header__top">
+                <a class="logo header__logo" href="#">
+                    <img class="logo__img" src="img/logo.png" alt="Logo">
+                </a>
+                <button class="menu__burger" type="button">
+                    <span class="menu__line"></span>
+                    <span class="visually-hidden">
+                        when clicked, a mobile menu will open
+                    </span>
+                </button>
+            </div>
 
             <ul class="menu header__menu">
                 <li class="menu__item">
@@ -71,15 +79,7 @@
                     <span class="user-nav__num">0</span>
                 </a>
 
-                <button class="user-nav__link user-nav__btn user-nav__decor" type="button">
-                    <span class="visually-hidden">
-                        when clicked, a mobile menu will open
-                    </span>
-                    <svg class="user-nav__icon user-nav__icon--dark">
-                        <use xlink:href="img/sprite.svg#nav-icon"></use>
-                    </svg>
-                </button>
-                <button class="user-nav__link user-nav__btn user-nav__mobail" type="button">
+                <button class="user-nav__link user-nav__btn" type="button">
                     <span class="visually-hidden">
                         when clicked, a mobile menu will open
                     </span>

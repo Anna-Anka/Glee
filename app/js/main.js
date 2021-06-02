@@ -1,10 +1,16 @@
 $(function () {
 
-    $('.user-nav__mobail').on('click', function () {
+    /*$('.user-nav__mobail').on('click', function () {
         $('.header__menu').toggleClass('menu--active');
         $('.user-nav').toggleClass('user-nav--active');
         $('body').toggleClass('lock');
-    })
+    })*/
+
+    $('.menu__burger').on('click', function () {
+        $('.menu__burger').toggleClass('menu__burger--active');
+        $('body').toggleClass('lock');
+        $('.header__menu').toggleClass('menu--active');
+    });
 
     $('.top-slider__items').slick({
         dots: true,

@@ -24,16 +24,16 @@
         }
 
         @include max-w($lg) {
-            grid-template-columns: 36% 36%;
+            grid-template-columns: 45% 45%;
         }
 
         @include max-w($md) {
             margin-bottom: 35px;
-            grid-template-columns: 1fr;
         }
 
         @include max-w($sm) {
             margin-bottom: 15px;
+            grid-template-columns: 1fr;
         }
     }
 
@@ -45,7 +45,6 @@
         width: 100%;
         font-size: 16px;
         position: relative;
-        transition: transform 0.5s;
         margin: 0 auto;
 
         @include max-w($xl) {
@@ -54,6 +53,7 @@
 
         &:hover {
             transform: translateY(-5px);
+            transition: transform 0.5s;
 
             .product-card__hover {
                 opacity: 1;
@@ -95,7 +95,7 @@
         padding-bottom: 75px;
 
         @include max-w($xl) {
-            padding-bottom: 40px;
+            padding-bottom: 20px;
         }
 
         @include max-w($md) {
@@ -103,7 +103,7 @@
         }
 
         @include max-w($lm) {
-            padding: 10px 0 25px;
+            padding-top: 10px;
         }
 
         &:not(:last-child) {
@@ -151,16 +151,13 @@
         margin-right: 60px;
         margin-top: -90px;
 
-        &--first {
-            @include max-w($md) {
-                width: 200px;
-            }
+        @include max-w($lg) {
+            width: 170px;
+            height: 324px;
         }
 
         @include max-w($md) {
             margin-top: 0;
-            width: 219px;
-            height: 394px;
         }
 
         @include max-w($sm) {
@@ -171,6 +168,18 @@
         @include max-w($lm) {
             width: 100px;
             margin-bottom: 20px;
+        }
+
+        &--first {
+            @include max-w($lg) {
+                width: 183px;
+                height: 320px;
+            }
+
+            @include max-w($sm) {
+                width: 127px;
+                height: 221px;
+            }
         }
     }
 
@@ -204,8 +213,7 @@
         }
 
         @include max-w($lm) {
-            max-width: 92%;
-            text-align: center;
+            padding: 0 15px;
             margin-bottom: 15px;
         }
     }
@@ -245,6 +253,10 @@
 
         &:focus {
             color: $default;
+        }
+
+        &:active {
+            background-color: $brown400;
         }
     }
 }
