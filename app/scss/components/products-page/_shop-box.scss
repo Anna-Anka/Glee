@@ -56,16 +56,19 @@
 
         @include max-w($xl) {
             grid-template-columns: repeat(2, 60%);
+            margin-bottom: 30px;
         }
 
         @include max-w($lg) {
             grid-gap: 15px;
-            margin-bottom: 35px;
         }
 
         @include max-w($md) {
             grid-template-columns: 100%;
-            margin-bottom: 30px;
+        }
+
+        @include max-w($md) {
+            margin-bottom: 20px;
         }
 
         &--list {

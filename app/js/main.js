@@ -13,13 +13,10 @@ $(function () {
         $('.shop__items').removeClass('shop__items--list')
     });
 
-    $('.product-shop').each(function () {
-            $('.product-shop__card').on('click', function () {
-                $('.product-shop__buttons').addClass('product-shop__buttons--active');
-                $('.product-shop__btn').addClass('product-shop__btn--active');
-            });
+    $('.product-shop__card').on('click', function () {
+        $('.product-shop__buttons').addClass('product-shop__buttons--active');
+        $('.product-shop__btn').addClass('product-shop__btn--active');
     });
-
 
     $('.product-shop__star').rateYo({
         starWidth: '18px',
