@@ -1,0 +1,36 @@
+.breadcrums {
+    &__list {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__item {
+        position: relative;
+        padding-right: 7px;
+
+        &::before {
+            content: "/";
+            position: absolute;
+            top: 3px;
+            right: -7px;
+        }
+
+        &:not(:last-child) {
+            margin-right: 15px;
+        }
+
+        &:last-child {
+            &::before {
+                display: none;
+            }
+        }
+    }
+
+    &__link {
+        font-size: 14px;
+        line-height: 1.8;
+        font-family: $rubik;
+        color: $dark550;
+        @include link;
+    }
+}

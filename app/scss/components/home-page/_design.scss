@@ -24,6 +24,7 @@
         width: 100%;
         transition: background-color 0.5s;
         margin: 0 auto;
+        position: relative;
 
         &:hover {
             background-color: $light500;

@@ -1,13 +1,13 @@
 @import 'fonts';
 @import 'vars';
-@import 'mixins';
 @import 'reset';
+@import 'mixins';
 @import 'libs';
 @import 'global';
 
 @import 'components/header';
 
-
+//Home page
 @import 'components/home-page/top-slider';
 @import 'components/home-page/advantages';
 
@@ -18,6 +18,14 @@
 @import 'components/home-page/products-week';
 @import 'components/home-page/design';
 @import 'components/home-page/insights';
+
+//Products-list page
+
+@import 'components/breadcrums';
+@import 'components/top-heading';
+@import 'components/products-page/filters';
+@import 'components/products-page/shop-box';
+@import 'components/pagination';
 
 @import 'components/footer';
 
