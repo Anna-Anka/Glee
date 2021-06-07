@@ -27,5 +27,11 @@
 @import 'components/products-page/shop-box';
 @import 'components/pagination';
 
+@import 'components/products-page/filters/filter-brand';
+@import 'components/products-page/filters/filter-category';
+@import 'components/products-page/filters/filter-price';
+@import 'components/products-page/filters/filter-recent';
+@import 'components/products-page/filters/filter-view';
+
 @import 'components/footer';
 

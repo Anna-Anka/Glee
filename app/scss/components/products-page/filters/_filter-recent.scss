@@ -1,0 +1,61 @@
+.filter-recent {
+
+    &__item {
+        margin-bottom: 20px;
+        display: flex;
+        position: relative;
+        transition: transform 0.5s;
+
+        &:hover {
+            transform: translateY(-5px);
+        }
+    }
+
+    &__title {
+        padding-left: 0;
+    }
+
+    &__link {
+        display: flex;
+    }
+
+    &__picture {
+        width: 74px;
+        height: 78px;
+        border: 2px solid $light550;
+        display: flex;
+        justify-content: center;
+        padding: 2px 0;
+        margin-right: 15px;
+    }
+
+    &__content {
+        padding-top: 5px;
+        font-family: $rubik;
+        font-weight: $fw-400;
+        color: $brown800;
+
+        @include max-w($sm) {
+            margin: auto 0;
+        }
+    }
+
+    &__name,
+    &__star {
+        margin-bottom: 13px;
+
+        @include max-w($sm) {
+            margin-bottom: 7px;
+        }
+    }
+
+    &__name {
+        font-size: 14px;
+        line-height: 1;
+    }
+
+    &__price {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+}

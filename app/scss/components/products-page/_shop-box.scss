@@ -1,41 +1,37 @@
+.shop-menu {
+    @include btn;
+    display: none;
+    background-color: $grey400;
+    color: $light100;
+    font-size: 17px;
+    border-radius: 5px;
+    border: none;
+    font-family: $rubik;
+    font-weight: $fw-400;
+    padding: 17px 20px 17px 50px;
+    margin-bottom: 20px;
+    position: relative;
+
+    @include max-w($lg) {
+        display: block;
+    }
+
+    &__icon {
+        background-repeat: no-repeat;
+        width: 20px;
+        height: 20px;
+        fill: $light100;
+        position: absolute;
+        top: 35%;
+        left: 17px;
+    }
+}
+
 .product-shop {
     display: none;
 }
 
 .shop {
-    &__inner {
-        display: flex;
-        margin-bottom: 295px;
-
-        @include max-w($xl) {
-            margin-bottom: 265px;
-        }
-
-        @include max-w($md) {
-            justify-content: center;
-            margin-bottom: 240px;
-        }
-
-        @include max-w($sm) {
-            display: block;
-        }
-    }
-
-    &__filters {
-        max-width: 270px;
-        width: 100%;
-        margin-right: 28px;
-
-        @include max-w($lg) {
-            max-width: 215px;
-            margin-right: 25px;
-        }
-
-        @include max-w($sm) {
-            margin: 0 auto 40px;
-        }
-    }
-
     &__item {
         margin-bottom: 40px;
 
@@ -48,27 +44,40 @@
         }
     }
 
+    .pagination {
+        margin-bottom: 120px;
+
+        @include max-w($xl) {
+            margin-bottom: 60px;
+        }
+
+        @include max-w($lg) {
+            margin-bottom: 40px;
+        }
+    }
+
     &__items {
         display: grid;
-        grid-template-columns: repeat(3, 40%);
+        grid-template-columns: repeat(3, 32%);
         grid-gap: 0 30px;
         margin-bottom: 75px;
 
         @include max-w($xl) {
-            grid-template-columns: repeat(2, 60%);
+            grid-template-columns: repeat(2, 38%);
             margin-bottom: 30px;
         }
 
         @include max-w($lg) {
-            grid-gap: 15px;
+            grid-gap: 20px;
         }
 
         @include max-w($md) {
-            grid-template-columns: 100%;
-        }
-
-        @include max-w($md) {
+            grid-template-columns: repeat(2, 87%);
             margin-bottom: 20px;
+        }
+
+        @include max-w($sm) {
+            grid-template-columns: 100%;
         }
 
         &--list {
@@ -133,15 +142,10 @@
             }
 
             .product-card__img {
-                max-width: 323px;
-                max-height: 347px;
                 min-width: 265px;
-                min-height: 245px;
 
                 @include max-w($lg) {
-                    max-width: 300px;
                     min-width: 190px;
-                    min-height: 190px;
                 }
             }
 
@@ -152,26 +156,6 @@
             .product-shop {
                 display: block;
                 margin: auto 0;
-            }
-        }
-    }
-
-    .partners {
-        margin-top: 0;
-
-        &__items {
-            padding: 73px 0;
-
-            @include max-w($xl) {
-                padding: 30px 0;
-            }
-
-            @include max-w($lg) {
-                padding: 20px 0;
-            }
-
-            @include max-w($lm) {
-                padding: 15px 0;
             }
         }
     }
@@ -198,13 +182,13 @@
 }
 
 .product-shop {
+    font-family: $rubik;
+    color: $brown800;
 
     &__name,
     &__price,
     &__descr,
     &__star {
-        font-family: $rubik;
-        color: $brown800;
         margin-bottom: 27px;
 
         @include max-w($lg) {
@@ -291,3 +275,10 @@
         }
     }
 }
+
+
+.partners__shop {
+    padding-top: 215px;
+}
+
+    

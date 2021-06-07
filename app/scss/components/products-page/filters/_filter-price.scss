@@ -1,0 +1,52 @@
+.filter-price {
+    margin-bottom: 71px;
+
+    &__title {
+        margin-bottom: 7px;
+    }
+
+    .irs-min,
+    .irs-max,
+    .irs-to,
+    .irs-from,
+    .irs-single {
+        display: none;
+    }
+
+    .irs-bar {
+        height: 2px;
+        background-color: $accent;
+    }
+
+    .irs-line {
+        background-color: $light600;
+        height: 3px;
+    }
+
+    .irs-handle {
+        background-color: $accent;
+        width: 15px;
+        height: 15px;
+        top: 19px;
+
+        i {
+            display: none;
+        }
+    }
+
+    .irs--flat .irs-handle>i {
+        &:first-child {
+            display: none;
+        }
+    }
+
+    &__numbers {
+        display: flex;
+        justify-content: space-between;
+        font-family: $rubik;
+        font-size: 14px;
+        line-height: 3;
+        font-weight: $fw-400;
+        color: $title;
+    }
+}

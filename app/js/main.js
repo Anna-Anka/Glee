@@ -1,7 +1,7 @@
 $(function () {
 
     $('.filter-view__btn').on('click', function () {
-        $('.filter-view__btn').removeClass('filter-view__btn--active');
+        $(this).removeClass('filter-view__btn--active');
         $(this).addClass('filter-view__btn--active');
     });
 
@@ -11,11 +11,6 @@ $(function () {
 
     $('.btn-grid').on('click', function () {
         $('.shop__items').removeClass('shop__items--list')
-    });
-
-    $('.product-shop__card').on('click', function () {
-        $('.product-shop__buttons').addClass('product-shop__buttons--active');
-        $('.product-shop__btn').addClass('product-shop__btn--active');
     });
 
     $('.product-shop__star').rateYo({
@@ -49,6 +44,18 @@ $(function () {
         },
     });
 
+    $('.shop-menu').on('click', function () {
+        $(this).toggleClass('shop-menu--active');
+        $('.filters').toggleClass('filters--active');
+        $('body').toggleClass('lock-shop');
+       $('.backdrop').toggleClass('backdrop--active');
+    });
+
+    $('.filters__burger').on('click', function (){
+        $('.filters').removeClass('filters--active');
+        $('.backdrop').removeClass('backdrop--active');
+        $('body').removeClass('lock-shop');
+    });
 
     $('.menu__burger').on('click', function () {
         $('.menu__burger').toggleClass('menu__burger--active');
@@ -80,6 +87,21 @@ $(function () {
                 }
             }
         ]
+    });
+
+    const productButtons = document.querySelectorAll('.product-shop__buttons');
+    productButtons.forEach(item => {
+        item.addEventListener('click', () => {
+            item.classList.toggle('product-shop__buttons--active');
+            item.nextElementSibling.classList.toggle('product-shop__btn--active');
+        });
+    });
+
+    const filterTitle = document.querySelectorAll('.filter__title');
+    filterTitle.forEach(item => {
+        item.addEventListener('click', () => {
+            item.nextElementSibling.classList.toggle('filter--hidden');
+        });
     });
 
     var products = document.querySelector('[data-ref="products"]');

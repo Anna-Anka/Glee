@@ -10,16 +10,38 @@
     <title>Product List</title>
 </head>
 
-<body>
-
+<body class="body">
+    <div class="backdrop"></div>
     @include("./components/header.html")
 
-    <main class="main">
-        @include("./components/products-page/top-heading.html")
-        @include("./components/products-page/filters.html")
-        @include("./components/products-page/shop-box.html")
-    </main>
+    @include("./components/products-page/top-heading.html")
+   <div class="container">
+        <button class="shop-menu" type="button">
+            All filters
+            <svg class="shop-menu__icon">
+                <use xlink:href="img/sprite.svg#filter-solid"></use>
+            </svg>
+        </button>
+        
+        <div class="product-list">
+            <section class="filters">
+                <button class="filters__burger" type="button">
+                    <span class="filters__line"></span>
+                </button>
+                @include("./components/products-page/filters/filter-view.html")
+                @include("./components/products-page/filters/filter-category.html")
+                @include("./components/products-page/filters/filter-price.html")
+                @include("./components/products-page/filters/filter-brand.html")
+                @include("./components/products-page/filters/filter-recent.html")
+            </section>
+            <main class="main">
+                @include("./components/products-page/shop-box.html")
+            </main>
+        </div>
+    </div>
 
+ 
+    @include("./components/products-page/partners.html")
     @include("./components/footer.html")
 
     <script src="js/main.min.js"></script>

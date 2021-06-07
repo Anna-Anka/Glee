@@ -1,0 +1,16 @@
+.filter-category {
+    &__text {
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: "";
+            top: 18px;
+            right: 15px;
+            background-image: url('../img/sprite.svg#insights-right-icon');
+            background-repeat: no-repeat;
+            width: 7px;
+            height: 10px;
+        }
+    }
+}
