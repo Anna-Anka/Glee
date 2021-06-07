@@ -48,7 +48,7 @@ $(function () {
         $(this).toggleClass('shop-menu--active');
         $('.filters').toggleClass('filters--active');
         $('body').toggleClass('lock-shop');
-       $('.backdrop').toggleClass('backdrop--active');
+        $('.backdrop').toggleClass('backdrop--active');
     });
 
     $('.filters__burger').on('click', function (){

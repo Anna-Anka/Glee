@@ -13,7 +13,6 @@
 <body class="body">
     <div class="backdrop"></div>
     @include("./components/header.html")
-
     @include("./components/products-page/top-heading.html")
    <div class="container">
         <button class="shop-menu" type="button">
@@ -26,6 +25,9 @@
         <div class="product-list">
             <section class="filters">
                 <button class="filters__burger" type="button">
+                    <span class="visually-hidden">
+                        when clicked, a list of filters will open
+                    </span>
                     <span class="filters__line"></span>
                 </button>
                 @include("./components/products-page/filters/filter-view.html")
@@ -40,7 +42,6 @@
         </div>
     </div>
 
- 
     @include("./components/products-page/partners.html")
     @include("./components/footer.html")
 

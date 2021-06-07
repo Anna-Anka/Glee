@@ -31,6 +31,10 @@
     display: none;
 }
 
+.product-list {
+    display: flex;
+}
+
 .shop {
     &__item {
         margin-bottom: 40px;
@@ -276,9 +280,13 @@
     }
 }
 
-
 .partners__shop {
-    padding-top: 215px;
+    padding: 83px 0 90px;
+    margin-top: 0;
+
+    @include max-w($xl) {
+        padding: 15px 0;
+    }
 }
 
     

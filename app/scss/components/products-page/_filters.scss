@@ -1,7 +1,3 @@
-.product-list {
-    display: flex;
-}
-
 .filters {
     max-width: 270px;
     width: 100%;
@@ -16,7 +12,7 @@
         padding: 20px;
         height: 100vh;
         overflow: auto;
-        background-color: $light300;
+        background-color: $light150;
         display: none;
     }
 
@@ -88,6 +84,12 @@
         display: inline-block;
         margin-bottom: 25px;
         max-width: 230px;
+        cursor: pointer;
+        transition: color 0.5s;
+
+        &:hover {
+            color: $brown400;
+        }
 
 
         @include max-w($lg) {
@@ -128,6 +130,6 @@
     }
 
     &--hidden {
-        display: none;
+        display: none !important;
     }
 }
