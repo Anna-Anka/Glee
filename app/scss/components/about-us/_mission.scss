@@ -1,0 +1,218 @@
+.mission {
+    margin-bottom: 120px;
+
+    @include max-w($xl) {
+        margin-bottom: 60px;
+    }
+
+    @include max-w($lg) {
+        margin-bottom: 15px;
+    }
+
+    &__inner {
+        display: flex;
+        margin-bottom: 124px;
+
+        @include max-w($xl) {
+            margin-bottom: 60px;
+        }
+
+        @include max-w($lg) {
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+    }
+
+    &__picture {
+        max-width: 570px;
+        width: 100%;
+        height: 676px;
+        margin-right: 40px;
+
+        @include max-w($xl) {
+            margin-right: 20px;
+        }
+
+        @include max-w($lg) {
+            display: flex;
+            justify-content: center;
+            height: 350px;
+            margin: 0 auto;
+        }
+    }
+
+    &__img {
+        height: 100%;
+    }
+
+    &__wrapper {
+        font-family: $rubik;
+        margin: auto 0;
+
+        @include max-w($xl) {
+            max-width: 500px;
+        }
+    }
+
+    &__experience {
+        display: flex;
+        margin-bottom: 23px;
+
+        @include max-w($xl) {
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__years {
+        font-weight: $fw-700;
+        font-size: 140px;
+        line-height: 1;
+        color: $accent;
+        margin-right: 35px;
+
+        @include max-w($xl) {
+            font-size: 120px;
+        }
+    }
+
+    &__items {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 7px;
+        }
+    }
+
+    &__number {
+        @include line-clamp(36px, 1, 1);
+    }
+
+    &__name {
+        @include line-clamp(16px, 1, 1);
+    }
+
+    &__descr {
+        margin-bottom: 68px;
+        max-width: 590px;
+        color: $title;
+
+        @include max-w($xl) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__title {
+        text-align: left;
+        @include line-clamp(36px, 1, 2);
+        margin-bottom: 37px;
+
+        @include max-w($xl) {
+            font-size: 34px;
+            margin-bottom: 10px;
+        }
+
+        @include max-w($xl) {
+            font-size: 30px;
+        }
+    }
+
+    &__text {
+        margin-bottom: 20px;
+        @include line-clamp(16px, 2, 5);
+
+        @include max-w($lg) {
+            @include line-clamp(16px, 2, 10);
+        }
+    }
+
+    &__awards {
+        padding: 25px 0 0 62px;
+        border-top: 2px solid $light470;
+        display: flex;
+        align-items: center;
+        max-width: 570px;
+
+        @include max-w($xl) {
+            padding-left: 50px;
+        }
+
+        @include max-w($lg) {
+            padding-top: 10px;
+        }
+
+        @include max-w($lm) {
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+
+    &__achievement {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 20px;
+            left: -55px;
+            width: 40px;
+            height: 40px;
+            background-repeat: no-repeat;
+        }
+
+        &:not(:last-child) {
+            padding: 12px 30px 12px 0;
+            margin-right: 90px;
+            border-right: 1px solid $light470;
+
+            @include max-w($xl) {
+                margin-right: 75px;
+            }
+
+            @include max-w($sm) {
+                border: none;
+                margin-right: 60px;
+            }
+
+            @include max-w($lm) {
+                padding-right: 0;
+                margin: 0 0 15px 0;
+            }
+        }
+    }
+
+    &__projects::before {
+        background-image: url('../img/mission/awards-1.png');
+    }
+
+    &__revenue::before {
+        background-image: url('../img/mission/awards-2.png');
+    }
+
+    &__honors::before {
+        top: 8px;
+        background-image: url('../img/mission/awards-3.png');
+    }
+
+    &__number {
+        font-size: 36px;
+        color: $title;
+        margin-bottom: 8px;
+
+        @include max-w($sm) {
+            font-size: 32px;
+        }
+    }
+
+    &__name {
+        font-weight: $fw-700;
+        color: $brown550;
+    }
+}

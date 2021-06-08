@@ -1,0 +1,116 @@
+.statistics {
+    background-color: $bg;
+    color: $title;
+    padding: 160px 0 75px;
+
+    @include max-w($xl) {
+        padding: 100px 0 40px;
+    }
+
+    @include max-w($lg) {
+        padding: 90px 0 20px;
+    }
+
+    @include max-w($md) {
+        padding-bottom: 0;
+    }
+
+    @include max-w($lm) {
+        padding-bottom: 20px;
+    }
+
+    &__items {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include max-w($md) {
+            display: grid;
+            grid-template-columns: repeat(2, 47%);
+        }
+
+        @include max-w($lm) {
+            grid-template-columns: repeat(1, 100%);
+        }
+    }
+
+    &__item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        max-width: 210px;
+
+        @include max-w($md) {
+            margin: 0 auto 90px;
+        }
+
+        &::before {
+            position: absolute;
+            content: "";
+            top: -70px;
+            left: 40px;
+            background-repeat: no-repeat;
+            height: 64px;
+            width: 74px;
+        }
+
+        &:not(:last-child) {
+            margin-right: 145px;
+
+            @include max-w($xl) {
+                margin-right: 100px;
+            }
+
+            @include max-w($lg) {
+                margin-right: 40px;
+            }
+
+            @include max-w($md) {
+                margin: 0 auto 90px;
+            }
+        }
+
+        &:last-child {
+            @include max-w($lm) {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__clients::before {
+        left: 50px;
+        background-image: url('../img/mission/statistics-1.png');
+    }
+
+    &__products::before {
+        top: -60px;
+        background-image: url('../img/mission/statistics-2.png');
+    }
+
+    &__daily::before {
+        width: 79px;
+        background-image: url('../img/mission/statistics-3.png');
+    }
+
+    &__brands::before {
+        width: 61px;
+        background-image: url('../img/mission/statistics-4.png');
+    }
+
+    &__number {
+        @include line-clamp(36px, 1.4, 1);
+
+        @include max-w($lg) {
+            font-size: 32px;
+        }
+    }
+
+    &__text {
+        @include line-clamp(18px, 1.9, 1);
+
+        @include max-w($lg) {
+            font-size: 17px;
+        }
+    }
+}

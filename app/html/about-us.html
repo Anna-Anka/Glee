@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>About-us</title>
+</head>
+
+<body class="body">
+    <div class="backdrop"></div>
+    @include("./components/header.html")
+
+    <main class="main">
+        @include("./components/about-us/top-heading.html")
+        @include("./components/about-us/mission.html")
+        @include("./components/about-us/statistics.html")
+        @include("./components/about-us/team.html")
+        @include("./components/home-page/insights.html")
+    </main>
+
+    @include("./components/footer.html")
+
+    <script src="js/main.min.js"></script>
+</body>
+
+</html>
