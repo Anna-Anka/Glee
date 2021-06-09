@@ -3,7 +3,7 @@
 
     &__input {
         background-color: $bg;
-        padding: 15px 10px 15px 15px;
+        padding: 0 5px;
         border: none;
 
         &::placeholder {
@@ -14,10 +14,6 @@
 
         &:focus {
             outline: 2px solid $accent;
-        }
-
-        @include max-w($xl) {
-            padding: 10px 5px;
         }
     }
 

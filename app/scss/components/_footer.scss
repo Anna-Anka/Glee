@@ -4,7 +4,7 @@
     &__content {
         display: flex;
         justify-content: center;
-        padding: 85px 0 54px;
+        padding: 75px 0 54px;
 
         @include max-w($xl) {
             padding: 15px 0 14px;
