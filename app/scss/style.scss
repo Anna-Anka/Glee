@@ -37,5 +37,12 @@
 @import 'components/about-us/team';
 @import 'components/about-us/statistics';
 
+/*@import 'blog-list';*/
+
+//blog-list
+@import 'components/blog-list/blog-inner';
+@import 'components/blog-list/blog-recent';
+@import 'components/blog-list/blog-search';
+
 @import 'components/footer';
 

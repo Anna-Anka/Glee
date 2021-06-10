@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Blog list</title>
+</head>
+
+<body class="body">
+    <div class="backdrop"></div>
+    @include("./components/header.html")
+    @include("./components/blog-list/top-heading.html")
+    <div class="container">
+        <button class="shop-menu" type="button">
+            Show filters
+            <svg class="shop-menu__icon">
+                <use xlink:href="img/sprite.svg#filter-solid"></use>
+            </svg>
+        </button>
+        <section class="blog">
+            <main class="main">
+                @include("./components/blog-list/blog-inner.html")
+            </main>
+
+            <div class="filters">
+                <button class="filters__burger" type="button">
+                    <span class="visually-hidden">
+                        when clicked, a list of filters will open
+                    </span>
+                    <span class="filters__line"></span>
+                </button>
+                @include("./components/blog-list/filters/search.html")
+                @include("./components/products-page/filters/filter-category.html")
+                @include("./components/blog-list/filters/recent.html")
+            </div>
+        </section>
+    </div>
+
+    @include("./components/products-page/partners.html")
+    @include("./components/footer.html")
+
+    <script src="js/main.min.js"></script>
+</body>
+
+</html>

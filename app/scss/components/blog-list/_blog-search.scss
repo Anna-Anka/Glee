@@ -1,0 +1,41 @@
+.blog-search {
+    display: flex;
+
+    &__input {
+        border: 2px solid $light300;
+        height: 44px;
+        border-radius: 5px 0 0 5px;
+        padding: 0 5px;
+    }
+
+    &__btn {
+        background-color: $light300;
+        border: none;
+        width: 48px;
+        height: 44px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0 5px 5px 0;
+        cursor: pointer;
+        transition: background-color 0.5s;
+
+        &:hover {
+            background-color: $light600;
+        }
+
+        &:focus {
+            background-color: $bg;
+        }
+
+        &:active {
+            background-color: $grey200;
+        }
+    }
+
+    &__icon {
+        width: 18px;
+        height: 18px;
+        fill: $title;
+    }
+}
