@@ -1,0 +1,207 @@
+.blog-one {
+    font-size: 16px;
+    font-weight: $fw-400;
+    font-family: $rubik;
+    line-height: 2;
+    display: flex;
+
+    .shop-menu {
+        margin-bottom: 13px;
+    }
+
+    &__content {
+        display: flex;
+
+        @include max-w($md) {
+            display: block;
+        }
+    }
+
+    &__inner {
+        max-width: 830px;
+        margin-right: 70px;
+        margin: 0 70px 120px 0;
+
+        @include max-w($lg) {
+            margin: 0 0 50px;
+        }
+
+        @include max-w($lg) {
+            margin-bottom: 30px;
+        }
+
+        @include max-w($sm) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__top {
+        margin-bottom: 20px;
+    }
+
+    &__picture {
+        margin-bottom: 10px;
+
+        @include max-w($sm) {
+            margin-bottom: 0;
+        }
+    }
+
+    &__data,
+    &__author {
+        &::before {
+            top: 4px;
+            left: -22px;
+        }
+    }
+
+    &__article {
+        margin-bottom: 52px;
+
+        @include max-w($lg) {
+            margin-bottom: 20px;
+        }
+
+        @include max-w($sm) {
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            color: $brown800;
+            font-size: 36px;
+
+            @include max-w($xl) {
+                font-size: 32px;
+            }
+
+            @include max-w($lg) {
+                margin-bottom: 0;
+            }
+
+            @include max-w($md) {
+                font-size: 30px;
+            }
+
+            @include max-w($lm) {
+                font-size: 28px;
+            }
+        }
+
+        span {
+            color: $title;
+            font-weight: $fw-500;
+
+            @include max-w($lg) {
+                max-width: 800px;
+                margin-bottom: 5px;
+            }
+
+            @include max-w($sm) {
+                margin-bottom: 0;
+            }
+        }
+
+        h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: $title;
+            font-weight: $fw-500;
+
+            @include max-w($lg) {
+                margin-bottom: 0;
+            }
+        }
+
+        p {
+            color: $brown450;
+        }
+
+        div {
+            color: $title;
+            margin-bottom: 33px;
+
+            @include max-w($xl) {
+                max-width: 900px;
+            }
+
+            @include max-w($lg) {
+                margin-bottom: 15px;
+            }
+
+            @include max-w($sm) {
+                margin-bottom: 10px;
+            }
+        }
+
+        blockquote {
+            background-color: $light300;
+            color: $title;
+            padding: 16px 85px 20px 43px;
+            position: relative;
+            margin-bottom: 45px;
+
+            @include max-w($lg) {
+                padding: 5px 20px;
+                margin-bottom: 25px;
+            }
+
+            @include max-w($sm) {
+                margin-bottom: 15px;
+            }
+
+            &::before {
+                position: absolute;
+                content: "";
+                height: 100%;
+                width: 6px;
+                background-color: $accent;
+                top: 0;
+                left: 0;
+            }
+        }
+
+        cite {
+            position: relative;
+            padding-left: 45px;
+            display: block;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                width: 20px;
+                height: 23px;
+                left: 0;
+                background-repeat: no-repeat;
+                background-image: url('../img/sprite.svg#blog-cite');
+            }
+        }
+
+        .blog-one__left-img {
+            float: left;
+            margin-right: 30px;
+
+            @include max-w($md) {
+                float: none;
+            }
+        }
+
+        .blog-one__right-img {
+            float: right;
+            margin-left: 30px;
+
+            @include max-w($md) {
+                float: none;
+            }
+        }
+    }
+
+    .filter__item {
+        margin-bottom: 40px;
+    }
+}
+
+.partners__shop {
+    padding-bottom: 63px;
+}

@@ -1,0 +1,108 @@
+.blog-form {
+    &__title {
+        font-size: 24px;
+        font-family: $rubik;
+        font-weight: $fw-700;
+        margin-bottom: 35px;
+        color: $grey400;
+
+        @include max-w($lg) {
+            margin-bottom: 5px;
+        }
+    }
+
+    &__form {
+        @include max-w($lm) {
+            max-width: 270px;
+        }
+    }
+
+    &__item {
+        position: relative;
+        display: inline-block;
+        max-width: 398px;
+        width: 100%;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 26%;
+            right: 30px;
+            background-repeat: no-repeat;
+            height: 13px;
+            width: 18px;
+        }
+    }
+
+    &__name {
+        margin-right: 30px;
+
+        &::before {
+            width: 14px;
+            background-image: url('../img/sprite.svg#comments-name');
+
+        }
+    }
+
+    &__email {
+        &::before {
+            background-image: url('../img/sprite.svg#comments-email');
+        }
+    }
+
+    &__text {
+        max-width: 830px;
+        width: 100%;
+        margin-bottom: 30px;
+
+        @include max-w($lg) {
+            margin-bottom: 10px;
+        }
+
+        @include max-w($sm) {
+            margin-bottom: 5px;
+        }
+
+        &::before {
+            top: 18px;
+            height: 15px;
+            background-image: url('../img/sprite.svg#comments-textarea');
+        }
+    }
+
+    &__input {
+        padding: 7px 65px 7px 20px;
+        font-size: 16px;
+        color: $brown800;
+        font-family: $rubik;
+        font-weight: $fw-400;
+        border: 1px solid $light590;
+        margin-bottom: 20px;
+        width: 100%;
+
+        &::placeholder {
+            font-size: 16px;
+            font-weight: $fw-400;
+            font-family: $rubik;
+            color: $brown300;
+            line-height: 2.3;
+        }
+
+        &:focus {
+            border-color: $accent;
+            outline: 1px solid $accent;
+        }
+    }
+
+    &__textarea {
+        height: 122px;
+        resize: none;
+        margin-bottom: 0;
+    }
+
+    &__btn {
+        @include btn;
+        text-transform: uppercase;
+        padding: 15px 35px;
+    }
+}

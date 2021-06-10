@@ -17,8 +17,11 @@
         margin-bottom: 135px;
 
         @include max-w($lg) {
-            margin-right: 0;
-            margin-bottom: 50px;
+            margin: 0 0 50px;
+        }
+
+        @include max-w($lg) {
+            margin-bottom: 30px;
         }
     }
 

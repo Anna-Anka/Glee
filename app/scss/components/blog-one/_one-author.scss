@@ -1,0 +1,119 @@
+.blog-author {
+    padding: 25px 0;
+    border: 2px solid $light580;
+    border-left: none;
+    border-right: none;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 55px;
+
+    @include max-w($lg) {
+        margin-bottom: 20px;
+    }
+
+    @include max-w($lm) {
+        flex-direction: column;
+    }
+
+    @include max-w($sm) {
+        padding: 10px 0;
+        margin-bottom: 15px;
+    }
+
+    &__person {
+        display: flex;
+        align-items: center;
+    }
+
+    &__picture {
+        width: 76px;
+        height: 76px;
+        margin-right: 27px;
+    }
+
+    &__img {
+        height: 100%;
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__name {
+        @include link;
+        font-size: 18px;
+        line-height: 1.2;
+        color: $brown800;
+        font-family: $rubik;
+        font-weight: $fw-500;
+        align-items: center;
+    }
+
+    &__positioin {
+        font-size: 16px;
+        line-height: 2;
+        font-weight: $fw-400;
+        font-family: $rubik;
+        color: $brown420;
+    }
+
+    &__info {
+        font-size: 16px;
+        line-height: 1.6;
+        color: $brown800;
+        font-weight: $fw-400;
+        font-family: $rubik;
+        padding-right: 20px;
+        margin: auto 0;
+    }
+
+    &__list {
+        display: flex;
+    }
+
+    &__share,
+    &__tag {
+        display: flex;
+    }
+
+    &__tag {
+        margin-bottom: 9px;
+
+        .blog-author__item {
+            &:not(:last-child) {
+                margin-right: 8px;
+            }
+        }
+    }
+
+    &__share {
+        .blog-author__item {
+            &:not(:last-child) {
+                margin-right: 25px;
+            }
+
+            &:hover {
+                .blog-author__icon {
+                    fill: $accent;
+                }
+            }
+        }
+    }
+
+    &__span {
+        margin-right: 20px;
+    }
+
+    &__link {
+        @include link;
+        color: $brown420;
+    }
+
+    &__icon {
+        width: 15px;
+        height: 15px;
+        fill: $brown250;
+        transition: fill 0.5s;
+    }
+}
