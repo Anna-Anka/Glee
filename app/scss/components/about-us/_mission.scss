@@ -86,6 +86,10 @@
         line-height: 2;
         &:not(:last-child) {
             margin-bottom: 7px;
+
+            @include max-w($lg) {
+                margin-bottom: 0;
+            }
         }
     }
 

@@ -1,6 +1,10 @@
 .footer {
     padding-right: 10px;
 
+    &__wrapper {
+        display: flex;
+    }
+
     &__content {
         display: flex;
         justify-content: center;
