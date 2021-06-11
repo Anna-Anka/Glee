@@ -5,7 +5,74 @@
     line-height: 2;
     display: flex;
 
-    .shop-menu {
+    &__top {
+        position: relative;
+        margin-bottom: 20px;
+
+        @include max-w($lg) {
+            margin-bottom: 5px;
+        }
+    }
+
+    &__info {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        max-width: 275px;
+        font-size: 12px;
+        text-transform: uppercase;
+        color: $light100;
+        background-color: $accent;
+        padding: 29px 31px 25px 40px;
+        display: flex;
+
+        @include max-w($lg) {
+            padding: 15px 20px 15px 25px;
+        }
+
+        @include max-w($lm) {
+            padding-top: 7px;
+            padding-bottom: 4px;
+        }
+    }
+
+    &__data,
+    &__author {
+        position: relative;
+        z-index: 30;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -17px;
+            background-repeat: no-repeat;
+            width: 15px;
+            height: 20px;
+        }
+    }
+
+    &__data {
+        margin-right: 43px;
+
+        &::before {
+            background-image: url('../img/sprite.svg#calendar');
+        }
+    }
+
+    &__author {
+        transition: color 0.5s;
+
+        &:hover {
+            color: $bg;
+        }
+
+        &::before {
+            background-image: url('../img/sprite.svg#blog-author');
+        }
+    }
+
+    .blog-one__menu {
         margin-bottom: 13px;
     }
 
@@ -35,15 +102,34 @@
         }
     }
 
-    &__top {
-        margin-bottom: 20px;
-    }
 
     &__picture {
         margin-bottom: 10px;
 
-        @include max-w($sm) {
+        @include max-w($xl) {
+            max-width: 623px;
+            height: 376px;
+        }
+
+        @include max-w($lg) {
             margin-bottom: 0;
+            max-width: 535px;
+            height: 323px;
+        }
+
+        @include max-w($md) {
+            max-width: 475px;
+            height: 287px;
+        }
+
+        @include max-w($sm) {
+            width: 449px;
+            height: 271px;
+        }
+
+        @include max-w($lm) {
+            width: 300px;
+            height: 182px;
         }
     }
 
@@ -56,14 +142,12 @@
     }
 
     &__article {
-        margin-bottom: 52px;
-
         @include max-w($lg) {
-            margin-bottom: 20px;
+            max-width: 90%;
         }
 
-        @include max-w($sm) {
-            margin-bottom: 15px;
+        @include max-w($lm) {
+            max-width: 100%;
         }
 
         h2 {
@@ -77,6 +161,7 @@
 
             @include max-w($lg) {
                 margin-bottom: 0;
+                line-height: 1.3;
             }
 
             @include max-w($md) {
@@ -88,7 +173,7 @@
             }
         }
 
-        span {
+        strong {
             color: $title;
             font-weight: $fw-500;
 
@@ -99,6 +184,23 @@
 
             @include max-w($sm) {
                 margin-bottom: 0;
+            }
+        }
+
+        p {
+            color: $title;
+            margin-bottom: 33px;
+
+            @include max-w($xl) {
+                max-width: 900px;
+            }
+
+            @include max-w($lg) {
+                margin-bottom: 15px;
+            }
+
+            @include max-w($sm) {
+                margin-bottom: 10px;
             }
         }
 
@@ -113,24 +215,9 @@
             }
         }
 
-        p {
-            color: $brown450;
-        }
-
-        div {
-            color: $title;
-            margin-bottom: 33px;
-
-            @include max-w($xl) {
-                max-width: 900px;
-            }
-
-            @include max-w($lg) {
-                margin-bottom: 15px;
-            }
-
-            @include max-w($sm) {
-                margin-bottom: 10px;
+        .blog-one__text {
+            p {
+                color: $brown450;
             }
         }
 
@@ -178,22 +265,8 @@
             }
         }
 
-        .blog-one__left-img {
-            float: left;
+        .blog-one__img {
             margin-right: 30px;
-
-            @include max-w($md) {
-                float: none;
-            }
-        }
-
-        .blog-one__right-img {
-            float: right;
-            margin-left: 30px;
-
-            @include max-w($md) {
-                float: none;
-            }
         }
     }
 

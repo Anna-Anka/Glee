@@ -12,8 +12,8 @@
     }
 
     &__form {
-        @include max-w($lm) {
-            max-width: 270px;
+        @include max-w($sm) {
+            width: 100%;
         }
     }
 
@@ -36,6 +36,10 @@
 
     &__name {
         margin-right: 30px;
+
+        @include max-w($lg) {
+            margin-right: 0;
+        }
 
         &::before {
             width: 14px;

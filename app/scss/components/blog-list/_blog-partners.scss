@@ -1,0 +1,19 @@
+.blog-partners {
+    .partners__img {
+        width: 140px;
+        max-height: 150px;
+    }
+
+    .partners__items {
+        margin-top: 0;
+        padding: 50px 0;
+
+        @include max-w($lg) {
+            padding: 20px 0;
+        }
+
+        @include max-w($lm) {
+            padding: 15px 0;
+        }
+    }
+}

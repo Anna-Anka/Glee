@@ -37,12 +37,13 @@
 @import 'components/about-us/team';
 @import 'components/about-us/statistics';
 
-/*@import 'blog-list';*/
 
 //blog-list
 @import 'components/blog-list/blog-inner';
 @import 'components/blog-list/blog-recent';
 @import 'components/blog-list/blog-search';
+@import 'components/blog-card';
+@import 'components/blog-list/blog-partners';
 
 //blog-one
 @import 'components/blog-one/one-inner';
