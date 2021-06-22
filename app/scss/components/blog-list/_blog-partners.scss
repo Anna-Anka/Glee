@@ -2,6 +2,10 @@
     .partners__img {
         width: 140px;
         max-height: 150px;
+
+        @include max-w($lm) {
+            width: 100px;
+        }
     }
 
     .partners__items {
@@ -13,7 +17,7 @@
         }
 
         @include max-w($lm) {
-            padding: 15px 0;
+            padding: 13px 0;
         }
     }
 }

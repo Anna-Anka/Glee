@@ -77,4 +77,8 @@
         fill: $grey300;
         transition: fill 0.5s;
     }
+
+    &__img {
+        height: 100%;
+    }
 }

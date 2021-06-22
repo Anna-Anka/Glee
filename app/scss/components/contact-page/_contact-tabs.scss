@@ -1,0 +1,157 @@
+.contact-tabs {
+    &__top {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 120px;
+
+        @include max-w($xl) {
+            margin-bottom: 55px;
+        }
+
+        @include max-w($lg) {
+            display: block;
+            margin-bottom: 30px;
+        }
+
+        @include max-w($lm) {
+            margin-bottom: 25px;
+        }
+    }
+
+    &__list {
+        background-color: $light220;
+        padding: 70px 50px;
+        position: relative;
+        transition: transform 0.5s;
+        max-width: 400px;
+        margin: 0 auto;
+
+        &:not(:last-child) {
+            margin-right: 30px;
+
+            @include max-w($lg) {
+                margin: 0 auto 12px;
+            }
+        }
+
+        &:hover {
+            transform: translateY(-10px);
+
+            @include max-w($lg) {
+                transform: translateY(0);
+            }
+        }
+
+        @include max-w($xl) {
+            padding: 30px 20px;
+        }
+
+        @include max-w($lg) {
+            padding: 15px;
+        }
+    }
+
+    &__item {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        &--active {
+            border: 3px solid $accent;
+
+            .contact-tabs__icon {
+                fill: $light100;
+            }
+        }
+    }
+
+    &__decor {
+        width: 80px;
+        height: 80px;
+        box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.05);
+        border-radius: 20px;
+        text-align: center;
+        margin: 0 auto 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.5s;
+
+        &--active {
+            background-color: $accent;
+
+            .contact-tabs__icon {
+                fill: $light100;
+            }
+        }
+
+        @include max-w($lg) {
+            margin-bottom: 7px;
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    &__icon {
+        width: 35px;
+        height: 35px;
+        fill: $accent;
+        transition: fill 0.5s;
+
+        @include max-w($lg) {
+            width: 25px;
+            height: 25px;
+        }
+    }
+
+    &__name {
+        color: $dark800;
+        font-size: 20px;
+        font-weight: $fw-700;
+        margin-bottom: 15px;
+        text-align: center;
+
+        @include max-w($lg) {
+            margin-bottom: 5px;
+        }
+    }
+
+    &__text {
+        font-weight: $fw-400;
+        font-family: $rubik;
+        color: $brown450;
+        text-align: center;
+        max-width: 280px;
+        @include line-clamp(16px, 2, 2);
+
+        @include max-w($lg) {
+            margin: 0 auto;
+        }
+    }
+
+    &__content {
+        display: none;
+
+        &.contact-tabs__content--active {
+            display: grid;
+            grid-template-columns: 625px 500px;
+            grid-gap: 0 30px;
+
+            @include max-w($xl) {
+                grid-template-columns: 420px 500px;
+            }
+
+            @include max-w($lg) {
+                display: block;
+            }
+        }
+    } 
+}
+
+.map {
+    height: 330px;
+    max-width: 500px;
+    width: 100%;
+}

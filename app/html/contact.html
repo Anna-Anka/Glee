@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Contact</title>
+</head>
+
+<body class="body">
+    <div class="backdrop"></div>
+    @include("./components/header.html")
+    @include("./components/contact-page/top-heading.html")
+
+    <main class="main">
+        @include("./components/contact-page/contact.html")
+    </main>
+
+    @include("./components/home-page/insights.html")
+    @include("./components/footer.html")
+
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&libraries=&v=weekly" defer>
+    </script>
+
+    <script>
+        let map;
+
+        function initMap() {
+            map = new google.maps.Map(document.getElementById("map"), {
+                center: {
+                    lat: 29.76698801428138,
+                    lng: -95.3383564350704
+                },
+                zoom: 9,
+            });
+        };
+    </script>
+    <script src="js/main.min.js"></script>
+</body>
+
+</html>

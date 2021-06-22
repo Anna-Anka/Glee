@@ -1,0 +1,99 @@
+.terms {
+    font-weight: $fw-500;
+    color: $title;
+    font-family: $rubik;
+    margin-bottom: 120px;
+
+    @include max-w($xl) {
+        margin-bottom: 50px;
+    }
+
+    @include max-w($lg) {
+        margin-bottom: 8px;
+    }
+
+    &__title {
+        font-size: 24px;
+        line-height: 1.7;
+        margin-bottom: 12px;
+
+        @include max-w($lg) {
+            margin-bottom: 3px;
+        }
+
+        @include max-w($md) {
+            font-size: 22px;
+            line-height: 1.3;
+        }
+
+         @include max-w($sm) {
+            font-size: 20px;
+         }  
+    }
+
+    &__items {
+        margin-bottom: 60px;
+        padding-left: 40px;
+
+        @include max-w($lg) {
+            margin-bottom: 15px;
+        }
+
+        @include max-w($sm) {
+            margin-bottom: 7px;
+        }
+    }
+
+    &__item {
+        font-size: 16px;
+        line-height: 2;
+        font-weight: $fw-400;
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: "0";
+            top: 0 ;
+            left: -30px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 17px;
+
+            @include max-w($lg) {
+                margin-bottom: 5px;
+            }
+
+            @include max-w($sm) {
+                margin-bottom: 2px;
+            }
+        }
+
+        &:nth-child(n+10) {
+            &::after {
+                display: none;
+            }
+        }
+    }
+
+    &__list {
+        .terms__item {
+
+            &:not(:last-child) {
+                margin-bottom: 47px;
+
+                @include max-w($lg) {
+                    margin-bottom: 20px;
+                }
+
+                 @include max-w($sm) {
+                    margin-bottom: 10px;
+                 }
+            }
+
+            &::after {
+                display: none;
+            }
+        }
+    }
+}

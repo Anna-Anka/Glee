@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Login</title>
+</head>
+
+<body class="body">
+    <div class="backdrop"></div>
+    @include("./components/header.html")
+    @include("./components/login/top-heading.html")
+
+    <main class="main">
+        @include("./components/login/login.html")
+    </main>
+
+    @include("./components/blog-list/blog-partners.html")
+    @include("./components/footer.html")
+
+    <script src="js/main.min.js"></script>
+</body>
+
+</html>

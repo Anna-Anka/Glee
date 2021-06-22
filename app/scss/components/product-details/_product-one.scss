@@ -1,0 +1,185 @@
+.product-one {
+    font-family: $rubik;
+    font-weight: $fw-400;
+    color: $brown800;
+    font-size: 16px;
+    line-height: 2;
+    margin-bottom: 110px;
+
+    @include max-w($xl) {
+        margin-bottom: 50px;
+    }
+
+    @include max-w($lg) {
+        margin-bottom: 20px;
+    }
+
+    @include max-w($lm) {
+        margin-bottom: 13px;
+    }
+
+    &__inner {
+        display: flex;
+        margin-bottom: 85px;
+
+        @include max-w($lg) {
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        @include max-w($md) {
+            margin-bottom: 27px;
+        }
+    }
+
+    &__content {
+        margin: auto 0;
+    }
+
+    &__slide {
+        display: flex;
+    }
+
+    &__name,
+    &__star,
+    &__text {
+        margin-bottom: 20px;
+
+        @include max-w($lg) {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__name {
+        font-size: 40px;
+        line-height: 1;
+
+        @include max-w($lg) {
+            font-size: 36px;
+        }
+
+        @include max-w($md) {
+            font-size: 34px;
+        }
+    }
+
+    &__price {
+        margin-bottom: 30px;
+        font-size: 30px;
+        line-height: 1.3;
+
+        @include max-w($lg) {
+            margin-bottom: 5px;
+        }
+    }
+
+    &__text {
+        color: $title;
+
+        @include max-w($lg) {
+            max-width: 600px;
+        }
+    }
+
+    &__btns {
+        margin-bottom: 45px;
+        display: flex;
+
+        @include max-w($lg) {
+            margin-bottom: 15px;
+        }
+    }
+
+    &__btn {
+        @include btn;
+        text-transform: uppercase;
+        border-radius: 5px;
+        padding: 17px 50px;
+        font-size: 15px;
+
+        @include max-w($xl) {
+            padding: 15px 20px;
+        }
+
+        @include max-w($lm) {
+            padding: 13px 10px;
+        }
+    }
+
+    &__items {
+        color: $title;
+    }
+
+    &__input {
+        margin-right: 15px;
+    }
+
+    &__link {
+        @include link;
+    }
+}
+
+.jq-number__field {
+    width: 150px;
+    height: 53px;
+    border: 1px solid $accent;
+}
+
+.jq-number__field input {
+    width: 100%;
+    height: 50px;
+    color: $brown800;
+    text-align: center;
+    border: none;
+}
+
+.jq-number {
+    padding: 0;
+    position: relative;
+}
+
+.jq-number__spin {
+    position: absolute;
+    cursor: pointer;
+    width: 12px;
+    height: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.jq-number__spin.minus {
+    left: 15px;
+    border-right: 1px solid $accent;
+    padding: 24px 17px;
+}
+
+.jq-number__spin.plus {
+    right: 15px;
+    border-left: 1px solid $accent;
+    padding: 24px 17px;
+}
+
+.jq-number__spin::after {
+    content: '';
+    position: absolute;
+    top: 22px;
+    left: 4px;
+    width: 8px;
+    height: 1px;
+    background-color: $title;
+}
+
+.jq-number__spin.plus::after {
+    left: 19px;
+}
+
+.jq-number__spin.plus::before {
+    content: '';
+    position: absolute;
+    top: 18px;
+    left: 22px;
+    width: 1px;
+    height: 8px;
+    background-color: $title;
+}

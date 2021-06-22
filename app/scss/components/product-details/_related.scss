@@ -1,0 +1,106 @@
+.related {
+    margin-bottom: 125px;
+
+    @include max-w($xl) {
+        margin-bottom: 65px;
+    }
+
+    @include max-w($xl) {
+        margin-bottom: 20px;
+    }
+
+    @include max-w($md) {
+        margin-bottom: 15px;
+    }
+
+    &__title {
+        color: $title;
+        text-align: left;
+        margin-bottom: 70px;
+
+        @include max-w($lg) {
+            margin-bottom: 20px;
+        }
+
+        @include max-w($lm) {
+            margin-bottom: 55px;
+        }
+    }
+
+    &__items {
+        position: relative;
+    }
+
+    .slick-prev,
+    .slick-next {
+        @include btn;
+        transition: background-color 0.8s;
+        width: 50px;
+        height: 50px;
+        background-color: transparent;
+        border: 2px solid $accent;
+        border-radius: 5px;
+        fill: $accent;
+        position: absolute;
+        top: -118px;
+        right: 0;
+        cursor: pointer;
+
+        @include max-w($lg) {
+            top: -65px;
+        }
+
+        @include max-w($lm) {
+            top: -50px;
+        }
+    }
+
+    .slick-prev {
+        right: 70px;
+    }
+
+    .slick-slide {
+        max-width: 270px;
+        margin-right: 25px;
+
+        @include max-w($xl) {
+            max-width: 370px;
+        }
+
+        @include max-w($lg) {
+            max-width: 470px;
+        }
+    }
+
+    .product-card {
+        min-height: 370px;
+    }
+
+    .product-card__picture {
+        margin-top: auto;
+        margin-bottom: 10px;
+    }
+
+    .product-card__text {
+        margin-bottom: 35px;
+    }
+
+    &__item {
+        box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+        border-radius: 10px;
+        position: relative;
+        transition: transform 0.5s;
+
+        &:hover {
+            transform: translateY(-10px);
+
+            .product-card__hover {
+                opacity: 1;
+            }
+        }
+
+        .product-card__img {
+            max-height: 230px;
+        }
+    }
+}

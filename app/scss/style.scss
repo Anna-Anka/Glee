@@ -51,5 +51,22 @@
 @import 'components/blog-one/comments';
 @import 'components/blog-one/one-form';
 
+//product-details
+@import 'components/product-details/product-one';
+@import 'components/product-details/product-slide';
+@import 'components/product-details/product-tabs';
+@import 'components/product-details/related';
+
+//contact
+@import 'components/contact-page/contact';
+@import 'components/contact-page/contact-tabs';
+@import 'components/contact-page/contact-form';
+
+//login
+@import 'components/login/login';
+
+//terms
+@import 'components/terms-page/terms';
+
 @import 'components/footer';
 

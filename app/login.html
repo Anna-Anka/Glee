@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Login</title>
+</head>
+
+<body class="body">
+    <div class="backdrop"></div>
+    <header class="header">
+    <h1 class="visually-hidden">
+        the best online furniture store
+    </h1>
+    <div class="container container--large">
+        <nav class="header__inner">
+            <div class="header__top">
+                <a class="logo header__logo" href="#">
+                    <img class="logo__img" src="img/logo.png" alt="Logo">
+                </a>
+                <button class="menu__burger" type="button">
+                    <span class="menu__line"></span>
+                    <span class="visually-hidden">
+                        when clicked, a mobile menu will open
+                    </span>
+                </button>
+            </div>
+
+            <ul class="menu header__menu">
+                <li class="menu__item">
+                    <a class="menu__link" href="#">
+                        Home <span>+</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="#">
+                        About
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="#">
+                        Services
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="#">
+                        Pages <span>+</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="#">
+                        News
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="#">
+                        Contact
+                    </a>
+                </li>
+            </ul>
+
+            <div class="user-nav">
+                <button class="user-icon user-icon--search user-nav__link">
+                    <span class="visually-hidden">
+                        when you click on this button, a product search will open
+                    </span>
+                    <svg class="user-nav__icon user-nav__icon--bright">
+                        <use xlink:href="img/sprite.svg#search-icon"></use>
+                    </svg>
+                </button>
+
+                <a class="user-nav__link user-nav__link--heart" href="#">
+                    <span class="visually-hidden">
+                        when you click, a page with the products you like will open
+                    </span>
+                    <svg class="user-nav__icon user-nav__icon--bright">
+                        <use xlink:href="img/sprite.svg#heart-icon"></use>
+                    </svg>
+                    <span class="user-nav__num">0</span>
+                </a>
+
+                <a class="user-nav__link user-nav__link--cart" href="#">
+                    <span class="visually-hidden">
+                        When you click, the shopping cart will open
+                    </span>
+                    <svg class="user-nav__icon user-nav__icon--bright">
+                        <use xlink:href="img/sprite.svg#cart-icon"></use>
+                    </svg>
+                    <span class="user-nav__num">0</span>
+                </a>
+
+                <button class="user-nav__link user-nav__btn" type="button">
+                    <span class="visually-hidden">
+                        when clicked, a mobile menu will open
+                    </span>
+                    <svg class="user-nav__icon user-nav__icon--dark">
+                        <use xlink:href="img/sprite.svg#nav-icon"></use>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </div>
+</header>
+    <section class="top">
+    <div class="container">
+        <h1 class="top__title">
+            Log in
+        </h1>
+        <div class="breadcrums">
+            <ul class="breadcrums__list">
+                <li class="breadcrums__item">
+                    <a class="breadcrums__link" href="#">
+                        Home
+                    </a>
+                </li>
+                <li class="breadcrums__item">
+                    <span class="breadcrums__link breadcrums__current" href="#">
+                        Log in
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+    <main class="main">
+        <section class="login">
+    <form class="login-form" action="#">
+        <label class="login-form__label" for="input__name">
+            Username or email address *
+        </label>
+        <input class="login-form__input" type="text" id="input__name" name="username">
+
+        <label class="login-form__label" for="input__password">
+            Password *
+        </label>
+        <input class="login-form__input login-form__password" type="password" id="input__password" name="userpassword">
+
+        <button type="submit" class="login-form__btn">
+            Login
+        </button>
+
+        <div class="login-form__info">
+            <div class="login-form__item">
+                <input class="login-form__check" type="checkbox" id="input__check">
+                <span class="login-form__style"></span> 
+                <label class="check__label login-form__label" for="input__check">
+                    Remember me
+                </label>
+            </div>
+
+            <div class="login-form__item">
+                <a class="login-form__link login-form__text" href="#">
+                    Lost your password?
+                </a>
+            </div>
+        </div>
+
+        <div class="login-form__subtext">
+            <a class="login-form__link" href="#">
+                Not registed? No problem
+            </a>
+            <button class="login-form__button">
+                Create an account
+            </button>
+        </div>
+    </form>
+</section>
+    </main>
+
+    <div class="partners blog-partners">
+    <div class="container">
+        <span class="visually-hidden">
+            The slider starts from the page, when you click on the link you will be taken to the
+            partner's page
+        </span>
+        <ul class="partners__items">
+            <li class="partners__item">
+                <a href="#" class="partners__link">
+                    <img class="partners__img" src="img/partners/partner-1.png" alt="Our partner">
+                </a>
+            </li>
+            <li class="partners__item">
+                <a href="#" class="partners__link">
+                    <img class="partners__img" src="img/partners/partner-2.png" alt="Our partner">
+                </a>
+            </li>
+            <li class="partners__item">
+                <a href="#" class="partners__link">
+                    <img class="partners__img" src="img/partners/partner-3.png" alt="Our partner">
+                </a>
+            </li>
+            <li class="partners__item">
+                <a href="#" class="partners__link">
+                    <img class="partners__img" src="img/partners/partner-4.png" alt="Our partner">
+                </a>
+            </li>
+            <li class="partners__item">
+                <a href="#" class="partners__link">
+                    <img class="partners__img" src="img/partners/partner-5.png" alt="Our partner">
+                </a>
+            </li>
+            <li class="partners__item">
+                <a href="#" class="partners__link">
+                    <img class="partners__img" src="img/partners/partner-5.png" alt="Our partner">
+                </a>
+            </li>
+            <li class="partners__item">
+                <a href="#" class="partners__link">
+                    <img class="partners__img" src="img/partners/partner-5.png" alt="Our partner">
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+    <footer class="footer">
+    <section>
+        <h2 class="visually-hidden ">
+            Below is contact information
+        </h2>
+    </section>
+    <div class="container">
+        <div class="footer__content">
+            <div class="footer__list footer__contact">
+                <a class="logo footer__logo" href="#">
+                    <img class="logo__img footer__img" src="img/logo.png" alt="Logo">
+                </a>
+                <address class="footer__items">
+                    <div class="footer__item">
+                        <a class="footer__link" href="#">
+                            ADDRESS: 4772 Wines Lane
+                            Houston, TX 77032
+                        </a>
+                    </div>
+                    <div class="footer__item">
+                        <a class="footer__link" href="tel:+8323475843">
+                            TELEPHONE: +832-347-5843
+                        </a>
+                    </div>
+                    <div class="footer__item">
+                        <a class="footer__link" href="mailto:contact@Glee.com">
+                            EMAIL: contact@Glee.com
+                        </a>
+                    </div>
+                </address>
+            </div>
+
+            <ul class="footer__wrapper">
+                <li class="footer__list footer__services">
+                    <h3 class="footer__name">
+                        services
+                    </h3>
+                    <ul class="footer__items">
+                        <li class="footer__item">
+                            <a class="footer__link" href="#">
+                                About us
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__link" href="#">
+                                Return Policy
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__link" href="#">
+                                Our Blog
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__link" href="#">
+                                Contact Us
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__link" href="#">
+                                Terms & Condition
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="footer__list footer__account">
+                    <h3 class="footer__name">
+                        account
+                    </h3>
+                    <ul class="footer__items">
+                        <li class="footer__item">
+                            <a class="footer__link" href="#">
+                                Your Account
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__link" href="#">
+                                Checkout
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__link" href="#">
+                                Login
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__link" href="#">
+                                Register
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            
+
+            <div class="footer__item footer__newsletter">
+                <h3 class="footer__name">
+                    newsletter
+                </h3>
+                <div class="footer__text">
+                    <p>
+                        Subscribe by our newsletter and get
+                        update protidin.
+                    </p>
+                </div>
+
+                <form class="form" action="#">
+                    <label class="visually-hidden" for="input__email">
+                        Enter your email address to subscribe to the newsletter
+                    </label>
+                    <input class="form__input" type="email" placeholder="Email address" name="email" id="input__email"
+                        required>
+                    <button class="form__btn" type="submit">
+                        Subscribe
+                    </button>
+                </form>
+
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <div class="footer__copy">
+                <p>
+                    ©2020 CopyRight Example. All rights reserved.
+                </p>
+            </div> 
+            <ul class="menu footer-menu">
+                <li class="footer-menu__item">
+                    <a class="footer-menu__link" href="#">
+                        Home
+                    </a>
+                </li>
+                <li class="footer-menu__item">
+                    <a class="footer-menu__link" href="#">
+                        About
+                    </a>
+                </li>
+                <li class="footer-menu__item">
+                    <a class="footer-menu__link" href="#">
+                        Blog
+                    </a>
+                </li>
+                <li class="footer-menu__item">
+                    <a class="footer-menu__link" href="#">
+                        Contact
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+    <script src="js/main.min.js"></script>
+</body>
+
+</html>
