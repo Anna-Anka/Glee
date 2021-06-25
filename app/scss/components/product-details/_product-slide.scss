@@ -39,7 +39,7 @@
 
     &__item {
         border: 1px solid $light550;
-        display: flex;
+        display: flex !important;
     }
 
     &__item,

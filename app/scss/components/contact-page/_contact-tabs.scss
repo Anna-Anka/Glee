@@ -131,6 +131,13 @@
         }
     }
 
+    &__email,
+    &__phone {
+        z-index: 5;
+        position: relative;
+        @include link;
+    }
+
     &__content {
         display: none;
 

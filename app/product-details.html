@@ -137,34 +137,37 @@
     <div class="container">
         <div class="product-one__inner">
             <div class="product-one__slide product-slide">
-                <div class="product-slide__thumb">
-                    <div class="product-slide__small">
+                <span class="visually-hidden">
+                    There are two sliders below. The selected images in the small slider will be shown in the large
+                </span>
+                <ul class="product-slide__thumb">
+                    <li class="product-slide__small">
                         <img class="product-slide__img" src="img/products/one/1.jpg" alt="Pendant Lamp">
-                    </div>
-                    <div class="product-slide__small">
+                    </li>
+                    <li class="product-slide__small">
                         <img class="product-slide__img" src="img/products/one/2.jpg" alt="Pendant Lamp">
-                    </div>
-                    <div class="product-slide__small">
+                    </li>
+                    <li class="product-slide__small">
                         <img class="product-slide__img" src="img/products/one/3.jpg" alt="Pendant Lamp">
-                    </div>
-                    <div class="product-slide__small">
+                    </li>
+                    <li class="product-slide__small">
                         <img class="product-slide__img" src="img/products/one/4.jpg" alt="Pendant Lamp">
-                    </div>
-                </div>
-                <div class="product-slide__big">
-                    <div class="product-slide__item">
+                    </li>
+                </ul>
+                <ul class="product-slide__big">
+                    <li class="product-slide__item">
                         <img class="product-slide__img" src="img/products/one/1.jpg" alt="Pendant Lamp">
-                    </div>
-                    <div class="product-slide__item">
+                    </li>
+                    <li class="product-slide__item">
                         <img class="product-slide__img" src="img/products/one/2.jpg" alt="Pendant Lamp">
-                    </div>
-                    <div class="product-slide__item">
+                    </li>
+                    <li class="product-slide__item">
                         <img class="product-slide__img" src="img/products/one/3.jpg" alt="Pendant Lamp">
-                    </div>
-                    <div class="product-slide__item">
+                    </li>
+                    <li class="product-slide__item">
                         <img class="product-slide__img" src="img/products/one/4.jpg" alt="Pendant Lamp">
-                    </div>
-                </div>
+                    </li>
+                </ul>
             </div>
             <div class="product-one__content">
                 <p class="product-one__name">
@@ -180,7 +183,10 @@
                     </p>
                 </div>
                 <div class="product-one__btns">
-                    <input class="product-one__input" type="number" value="1" min="1">
+                    <label class="visually-hidden" for="product__input">
+                        Select item quantity
+                    </label>
+                    <input class="product-one__input" type="number" value="1" min="1" id="product__input">
                     <button class="product-one__btn" type="button">
                         Add to cart
                     </button>
@@ -203,6 +209,9 @@
         </div>
         <div class="product-tabs">
     <ul class="product-tabs__top">
+        <span class="visually-hidden">
+            By clicking, information will appear that relates to this section.
+        </span>
         <li class="product-tabs__list">
             <a class="product-tabs__item product-tabs__item--active" href="#tab-1">
                 Description
@@ -230,8 +239,12 @@
                 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </p>
         </div>
-        <div class="product-tabs__content" id="tab-2">content 2</div>
-        <div class="product-tabs__content" id="tab-3">content 3</div>
+        <div class="product-tabs__content" id="tab-2">
+            content 2
+        </div>
+        <div class="product-tabs__content" id="tab-3">
+            content 3
+        </div>
     </div>
 </div>
 </section>
@@ -241,104 +254,11 @@
             Related Products
         </h2>
         <ul class="related__items">
+            <span class="visually-hidden">
+                Here are similar products. Clicking on the link will take you to the product page.
+            </span>
             <li class="related__item">
-                <a class="products-link" href="#">
-                    <span class="visually-hidden">
-                        when clicked, the product page will open
-                    </span>
-                </a>
-                <article class="product-card">
-                    <div class="product-card__picture">
-                        <img class="product-card__img" src="img/products/product-1.png" alt="Product">
-                    </div>
-                    <div class="product-card__text">
-                        <h3 class="product-card__name">
-                            Wooden radio
-                        </h3>
-                        <p class="product-card__price">
-                            <span>$29.00</span>
-                        </p>
-                    </div>
-                    <div class="product-card__hover">
-                        <a class="user-icon product-card__link" href="#">
-                            <span class="visually-hidden">
-                                When clicked, you will be taken to search
-                            </span>
-                            <svg class="product-card__icon">
-                                <use xlink:href="img/sprite.svg#search-icon"></use>
-                            </svg>
-                        </a>
-                        <button class="user-icon product-card__link" type="button">
-                            <span class="visually-hidden">
-                                When you click, you will be taken to the cart
-                            </span>
-                            <svg class="product-card__icon">
-                                <use xlink:href="img/sprite.svg#cart-icon"></use>
-                            </svg>
-                        </button>
-                        <button class="user-icon product-card__link" type="button">
-                            <span class="visually-hidden">
-                                when you click, a page with the products you like will open
-                            </span>
-                            <svg class="product-card__icon">
-                                <use xlink:href="img/sprite.svg#heart-icon"></use>
-                            </svg>
-                        </button>
-                    </div>
-                </article>
-            </li>
-            <li class="related__item">
-                <a class="products-link" href="#">
-                    <span class="visually-hidden">
-                        when clicked, the product page will open
-                    </span>
-                </a>
-                <article class="product-card">
-                    <div class="product-card__picture">
-                        <img class="product-card__img" src="img/products/product-2.png" alt="Product">
-                    </div>
-                    <div class="product-card__text">
-                        <h3 class="product-card__name">
-                            Wooden radio
-                        </h3>
-                        <p class="product-card__price">
-                            <span>$29.00</span>
-                        </p>
-                    </div>
-                    <div class="product-card__hover">
-                        <a class="user-icon product-card__link" href="#">
-                            <span class="visually-hidden">
-                                When clicked, you will be taken to search
-                            </span>
-                            <svg class="product-card__icon">
-                                <use xlink:href="img/sprite.svg#search-icon"></use>
-                            </svg>
-                        </a>
-                        <button class="user-icon product-card__link" type="button">
-                            <span class="visually-hidden">
-                                When you click, you will be taken to the cart
-                            </span>
-                            <svg class="product-card__icon">
-                                <use xlink:href="img/sprite.svg#cart-icon"></use>
-                            </svg>
-                        </button>
-                        <button class="user-icon product-card__link" type="button">
-                            <span class="visually-hidden">
-                                when you click, a page with the products you like will open
-                            </span>
-                            <svg class="product-card__icon">
-                                <use xlink:href="img/sprite.svg#heart-icon"></use>
-                            </svg>
-                        </button>
-                    </div>
-                </article>
-            </li>
-            <li class="related__item">
-                <a class="products-link" href="#">
-                    <span class="visually-hidden">
-                        when clicked, the product page will open
-                    </span>
-                </a>
+                <a class="products-link" href="#"></a>
                 <article class="product-card">
                     <div class="product-card__picture">
                         <img class="product-card__img" src="img/products/product-3.png" alt="Product">
@@ -380,11 +300,133 @@
                 </article>
             </li>
             <li class="related__item">
-                <a class="products-link" href="#">
-                    <span class="visually-hidden">
-                        when clicked, the product page will open
-                    </span>
-                </a>
+                <a class="products-link" href="#"></a>
+                <article class="product-card">
+                    <div class="product-card__picture">
+                        <img class="product-card__img" src="img/products/product-1.png" alt="Product">
+                    </div>
+                    <div class="product-card__text">
+                        <h3 class="product-card__name">
+                            Wooden radio
+                        </h3>
+                        <p class="product-card__price">
+                            <span>$29.00</span>
+                        </p>
+                    </div>
+                    <div class="product-card__hover">
+                        <a class="user-icon product-card__link" href="#">
+                            <span class="visually-hidden">
+                                When clicked, you will be taken to search
+                            </span>
+                            <svg class="product-card__icon">
+                                <use xlink:href="img/sprite.svg#search-icon"></use>
+                            </svg>
+                        </a>
+                        <button class="user-icon product-card__link" type="button">
+                            <span class="visually-hidden">
+                                When you click, you will be taken to the cart
+                            </span>
+                            <svg class="product-card__icon">
+                                <use xlink:href="img/sprite.svg#cart-icon"></use>
+                            </svg>
+                        </button>
+                        <button class="user-icon product-card__link" type="button">
+                            <span class="visually-hidden">
+                                when you click, a page with the products you like will open
+                            </span>
+                            <svg class="product-card__icon">
+                                <use xlink:href="img/sprite.svg#heart-icon"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </article>
+            </li>
+            <li class="related__item">
+                <a class="products-link" href="#"></a>
+                <article class="product-card">
+                    <div class="product-card__picture">
+                        <img class="product-card__img" src="img/products/product-2.png" alt="Product">
+                    </div>
+                    <div class="product-card__text">
+                        <h3 class="product-card__name">
+                            Wooden radio
+                        </h3>
+                        <p class="product-card__price">
+                            <span>$29.00</span>
+                        </p>
+                    </div>
+                    <div class="product-card__hover">
+                        <a class="user-icon product-card__link" href="#">
+                            <span class="visually-hidden">
+                                When clicked, you will be taken to search
+                            </span>
+                            <svg class="product-card__icon">
+                                <use xlink:href="img/sprite.svg#search-icon"></use>
+                            </svg>
+                        </a>
+                        <button class="user-icon product-card__link" type="button">
+                            <span class="visually-hidden">
+                                When you click, you will be taken to the cart
+                            </span>
+                            <svg class="product-card__icon">
+                                <use xlink:href="img/sprite.svg#cart-icon"></use>
+                            </svg>
+                        </button>
+                        <button class="user-icon product-card__link" type="button">
+                            <span class="visually-hidden">
+                                when you click, a page with the products you like will open
+                            </span>
+                            <svg class="product-card__icon">
+                                <use xlink:href="img/sprite.svg#heart-icon"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </article>
+            </li>
+            <li class="related__item">
+                <a class="products-link" href="#"></a>
+                <article class="product-card">
+                    <div class="product-card__picture">
+                        <img class="product-card__img" src="img/products/product-3.png" alt="Product">
+                    </div>
+                    <div class="product-card__text">
+                        <h3 class="product-card__name">
+                            Wooden radio
+                        </h3>
+                        <p class="product-card__price">
+                            <span>$29.00</span>
+                        </p>
+                    </div>
+                    <div class="product-card__hover">
+                        <a class="user-icon product-card__link" href="#">
+                            <span class="visually-hidden">
+                                When clicked, you will be taken to search
+                            </span>
+                            <svg class="product-card__icon">
+                                <use xlink:href="img/sprite.svg#search-icon"></use>
+                            </svg>
+                        </a>
+                        <button class="user-icon product-card__link" type="button">
+                            <span class="visually-hidden">
+                                When you click, you will be taken to the cart
+                            </span>
+                            <svg class="product-card__icon">
+                                <use xlink:href="img/sprite.svg#cart-icon"></use>
+                            </svg>
+                        </button>
+                        <button class="user-icon product-card__link" type="button">
+                            <span class="visually-hidden">
+                                when you click, a page with the products you like will open
+                            </span>
+                            <svg class="product-card__icon">
+                                <use xlink:href="img/sprite.svg#heart-icon"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </article>
+            </li>
+            <li class="related__item">
+                <a class="products-link" href="#"></a>
                 <article class="product-card">
                     <div class="product-card__picture">
                         <img class="product-card__img" src="img/products/product-4.png" alt="Product">
@@ -426,11 +468,7 @@
                 </article>
             </li>
             <li class="related__item">
-                <a class="products-link" href="#">
-                    <span class="visually-hidden">
-                        when clicked, the product page will open
-                    </span>
-                </a>
+                <a class="products-link" href="#"></a>
                 <article class="product-card">
                     <div class="product-card__picture">
                         <img class="product-card__img" src="img/products/product-3.png" alt="Product">

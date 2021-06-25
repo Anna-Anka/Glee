@@ -9,7 +9,11 @@
         <div class="contact-tabs">
             <ul class="contact-tabs__top">
                 <li class="contact-tabs__list">
-                    <a class="contact-tabs__item" href="#tab-1"></a>
+                    <a class="contact-tabs__item" href="#tab-1">
+                        <span class="visually-hidden">
+                            By clicking, information will appear that relates to this section.
+                        </span>
+                    </a>
                     <div class="contact-tabs__decor">
                         <svg class="contact-tabs__icon">
                             <use xlink:href="img/sprite.svg#contact-1"></use>
@@ -18,15 +22,19 @@
                     <h3 class="contact-tabs__name">
                         Address
                     </h3>
-                    <div class="contact-tabs__text">
+                    <address class="contact-tabs__text">
                         <p>
                             2416 Mapleview Drive
                             Tampa, FL 33634
                         </p>
-                    </div>
+                    </address>
                 </li>
                 <li class="contact-tabs__list">
-                    <a class="contact-tabs__item contact-tabs__item--active" href="#tab-2"></a>
+                    <a class="contact-tabs__item contact-tabs__item--active" href="#tab-2">
+                        <span class="visually-hidden">
+                            By clicking, information will appear that relates to this section.
+                        </span>
+                    </a>
                     <div class="contact-tabs__decor contact-tabs__decor--active">
                         <svg class="contact-tabs__icon">
                             <use xlink:href="img/sprite.svg#contact-2"></use>
@@ -36,14 +44,18 @@
                         Our Email
                     </h3>
                     <div class="contact-tabs__text">
-                        <p>
-                            Main Email : contact@website.com
-                            Inquiries : Info@mail.com
-                        </p>
+                        Main Email :
+                        <a class="contact-tabs__email" href="mailto:contact@website.com">contact@website.com</a>
+                        Inquiries :
+                        <a class="contact-tabs__email" href="mailto:Info@mail.com">Info@mail.com</a>
                     </div>
                 </li>
                 <li class="contact-tabs__list">
-                    <a class="contact-tabs__item" href="#tab-3"></a>
+                    <a class="contact-tabs__item" href="#tab-3">
+                        <span class="visually-hidden">
+                            By clicking, information will appear that relates to this section.
+                        </span>
+                    </a>
                     <div class="contact-tabs__decor">
                         <svg class="contact-tabs__icon">
                             <use xlink:href="img/sprite.svg#contact-3"></use>
@@ -53,15 +65,17 @@
                         Our Phone
                     </h3>
                     <div class="contact-tabs__text">
-                        <p>
-                            Office Telephone : 0029129102320
-                            Mobile : 000 2324 39493
-                        </p>
+                            Office Telephone : 
+                             <a class="contact-tabs__phone" href="tel:+0029129102320">0029129102320</a>
+                            Mobile : 
+                            <a class="contact-tabs__phone" href="tel:+000232439493">000 2324 39493</a>
                     </div>
                 </li>
             </ul>
             <div class="contact-tabs__wrapper">
-                <div class="contact-tabs__content" id="tab-1">content1</div>
+                <div class="contact-tabs__content" id="tab-1">
+                    content1
+                </div>
                 <div class="contact-tabs__content contact-tabs__content--active" id="tab-2">
                     <form class="contact-form">
                         <div class="contact-form__top">
@@ -92,11 +106,15 @@
                         </button>
                     </form>
                     <div class="contact-tabs__map">
+                        <span class="visually-hidden">
+                            here is the map
+                        </span>
                         <div class="map" id="map"></div>
                     </div>
-
                 </div>
-                <div class="contact-tabs__content" id="tab-3">content3</div>
+                <div class="contact-tabs__content" id="tab-3">
+                    content3
+                </div>
             </div>
         </div>
     </div>
